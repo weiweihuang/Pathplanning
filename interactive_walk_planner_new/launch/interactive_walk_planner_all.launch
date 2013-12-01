@@ -1,0 +1,15 @@
+<launch>	
+
+
+  <node pkg="interactive_walk_planner" type="cloud_assembler" name="cloud_assembler" output="screen">
+    </node>
+
+  <node pkg="interactive_walk_planner" type="foot_interface_all" name="foot_interface_all" output="screen">
+    </node>
+
+  <node pkg="interactive_walk_planner" type="step_plan_online" name="step_plan_online" output="screen">
+  <param name="action_path"  value="$(find interactive_walk_planner)/action_sets/" />
+    </node>
+
+
+</launch>

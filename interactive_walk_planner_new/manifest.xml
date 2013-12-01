@@ -1,0 +1,27 @@
+<package>
+  <description brief="interactive_walk_planner">
+
+     interactive_walk_planner
+
+  </description>
+  <author>huangwei</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/interactive_walk_planner</url>
+  <depend package="roscpp"/>
+  <depend package="atlas_ros_msgs"/>
+  <depend package="atlas_msgs"/>
+  <depend package="std_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+  <depend package="image_transport"/>
+  <depend package="tf"/>
+  <depend package="pcl"/>
+  <depend package="pcl_ros"/>
+  <depend package="laser_geometry"/>
+  <depend package="visualization_msgs"/>
+  <depend package="interactive_markers"/>
+</package>
+
+
