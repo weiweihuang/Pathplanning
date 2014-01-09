@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new
+CMAKE_SOURCE_DIR = /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build
+CMAKE_BINARY_DIR = /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -107,9 +107,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -241,6 +241,19 @@ cloud_assembler/fast:
 .PHONY : cloud_assembler/fast
 
 #=============================================================================
+# Target rules for targets named cloud_assembler_ocu
+
+# Build rule for target.
+cloud_assembler_ocu: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cloud_assembler_ocu
+.PHONY : cloud_assembler_ocu
+
+# fast build rule for target.
+cloud_assembler_ocu/fast:
+	$(MAKE) -f CMakeFiles/cloud_assembler_ocu.dir/build.make CMakeFiles/cloud_assembler_ocu.dir/build
+.PHONY : cloud_assembler_ocu/fast
+
+#=============================================================================
 # Target rules for targets named doxygen
 
 # Build rule for target.
@@ -265,6 +278,19 @@ foot_interface_all: cmake_check_build_system
 foot_interface_all/fast:
 	$(MAKE) -f CMakeFiles/foot_interface_all.dir/build.make CMakeFiles/foot_interface_all.dir/build
 .PHONY : foot_interface_all/fast
+
+#=============================================================================
+# Target rules for targets named foot_interface_ocu
+
+# Build rule for target.
+foot_interface_ocu: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 foot_interface_ocu
+.PHONY : foot_interface_ocu
+
+# fast build rule for target.
+foot_interface_ocu/fast:
+	$(MAKE) -f CMakeFiles/foot_interface_ocu.dir/build.make CMakeFiles/foot_interface_ocu.dir/build
+.PHONY : foot_interface_ocu/fast
 
 #=============================================================================
 # Target rules for targets named rosbuild_clean-test-results
@@ -371,17 +397,30 @@ run_tests/fast:
 .PHONY : run_tests/fast
 
 #=============================================================================
-# Target rules for targets named step_plan_online
+# Target rules for targets named step_plan_all
 
 # Build rule for target.
-step_plan_online: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 step_plan_online
-.PHONY : step_plan_online
+step_plan_all: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 step_plan_all
+.PHONY : step_plan_all
 
 # fast build rule for target.
-step_plan_online/fast:
-	$(MAKE) -f CMakeFiles/step_plan_online.dir/build.make CMakeFiles/step_plan_online.dir/build
-.PHONY : step_plan_online/fast
+step_plan_all/fast:
+	$(MAKE) -f CMakeFiles/step_plan_all.dir/build.make CMakeFiles/step_plan_all.dir/build
+.PHONY : step_plan_all/fast
+
+#=============================================================================
+# Target rules for targets named step_plan_ocu
+
+# Build rule for target.
+step_plan_ocu: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 step_plan_ocu
+.PHONY : step_plan_ocu
+
+# fast build rule for target.
+step_plan_ocu/fast:
+	$(MAKE) -f CMakeFiles/step_plan_ocu.dir/build.make CMakeFiles/step_plan_ocu.dir/build
+.PHONY : step_plan_ocu/fast
 
 #=============================================================================
 # Target rules for targets named test
@@ -479,7 +518,8 @@ src/astar.o: src/astar.cpp.o
 
 # target to build an object file
 src/astar.cpp.o:
-	$(MAKE) -f CMakeFiles/step_plan_online.dir/build.make CMakeFiles/step_plan_online.dir/src/astar.cpp.o
+	$(MAKE) -f CMakeFiles/step_plan_all.dir/build.make CMakeFiles/step_plan_all.dir/src/astar.cpp.o
+	$(MAKE) -f CMakeFiles/step_plan_ocu.dir/build.make CMakeFiles/step_plan_ocu.dir/src/astar.cpp.o
 .PHONY : src/astar.cpp.o
 
 src/astar.i: src/astar.cpp.i
@@ -487,7 +527,8 @@ src/astar.i: src/astar.cpp.i
 
 # target to preprocess a source file
 src/astar.cpp.i:
-	$(MAKE) -f CMakeFiles/step_plan_online.dir/build.make CMakeFiles/step_plan_online.dir/src/astar.cpp.i
+	$(MAKE) -f CMakeFiles/step_plan_all.dir/build.make CMakeFiles/step_plan_all.dir/src/astar.cpp.i
+	$(MAKE) -f CMakeFiles/step_plan_ocu.dir/build.make CMakeFiles/step_plan_ocu.dir/src/astar.cpp.i
 .PHONY : src/astar.cpp.i
 
 src/astar.s: src/astar.cpp.s
@@ -495,7 +536,8 @@ src/astar.s: src/astar.cpp.s
 
 # target to generate assembly for a file
 src/astar.cpp.s:
-	$(MAKE) -f CMakeFiles/step_plan_online.dir/build.make CMakeFiles/step_plan_online.dir/src/astar.cpp.s
+	$(MAKE) -f CMakeFiles/step_plan_all.dir/build.make CMakeFiles/step_plan_all.dir/src/astar.cpp.s
+	$(MAKE) -f CMakeFiles/step_plan_ocu.dir/build.make CMakeFiles/step_plan_ocu.dir/src/astar.cpp.s
 .PHONY : src/astar.cpp.s
 
 src/cloud_assembler.o: src/cloud_assembler.cpp.o
@@ -522,6 +564,30 @@ src/cloud_assembler.cpp.s:
 	$(MAKE) -f CMakeFiles/cloud_assembler.dir/build.make CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.s
 .PHONY : src/cloud_assembler.cpp.s
 
+src/cloud_assembler_ocu.o: src/cloud_assembler_ocu.cpp.o
+.PHONY : src/cloud_assembler_ocu.o
+
+# target to build an object file
+src/cloud_assembler_ocu.cpp.o:
+	$(MAKE) -f CMakeFiles/cloud_assembler_ocu.dir/build.make CMakeFiles/cloud_assembler_ocu.dir/src/cloud_assembler_ocu.cpp.o
+.PHONY : src/cloud_assembler_ocu.cpp.o
+
+src/cloud_assembler_ocu.i: src/cloud_assembler_ocu.cpp.i
+.PHONY : src/cloud_assembler_ocu.i
+
+# target to preprocess a source file
+src/cloud_assembler_ocu.cpp.i:
+	$(MAKE) -f CMakeFiles/cloud_assembler_ocu.dir/build.make CMakeFiles/cloud_assembler_ocu.dir/src/cloud_assembler_ocu.cpp.i
+.PHONY : src/cloud_assembler_ocu.cpp.i
+
+src/cloud_assembler_ocu.s: src/cloud_assembler_ocu.cpp.s
+.PHONY : src/cloud_assembler_ocu.s
+
+# target to generate assembly for a file
+src/cloud_assembler_ocu.cpp.s:
+	$(MAKE) -f CMakeFiles/cloud_assembler_ocu.dir/build.make CMakeFiles/cloud_assembler_ocu.dir/src/cloud_assembler_ocu.cpp.s
+.PHONY : src/cloud_assembler_ocu.cpp.s
+
 src/foot_interface_all.o: src/foot_interface_all.cpp.o
 .PHONY : src/foot_interface_all.o
 
@@ -546,29 +612,77 @@ src/foot_interface_all.cpp.s:
 	$(MAKE) -f CMakeFiles/foot_interface_all.dir/build.make CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.s
 .PHONY : src/foot_interface_all.cpp.s
 
-src/map_plan_online.o: src/map_plan_online.cpp.o
-.PHONY : src/map_plan_online.o
+src/foot_interface_ocu.o: src/foot_interface_ocu.cpp.o
+.PHONY : src/foot_interface_ocu.o
 
 # target to build an object file
-src/map_plan_online.cpp.o:
-	$(MAKE) -f CMakeFiles/step_plan_online.dir/build.make CMakeFiles/step_plan_online.dir/src/map_plan_online.cpp.o
-.PHONY : src/map_plan_online.cpp.o
+src/foot_interface_ocu.cpp.o:
+	$(MAKE) -f CMakeFiles/foot_interface_ocu.dir/build.make CMakeFiles/foot_interface_ocu.dir/src/foot_interface_ocu.cpp.o
+.PHONY : src/foot_interface_ocu.cpp.o
 
-src/map_plan_online.i: src/map_plan_online.cpp.i
-.PHONY : src/map_plan_online.i
+src/foot_interface_ocu.i: src/foot_interface_ocu.cpp.i
+.PHONY : src/foot_interface_ocu.i
 
 # target to preprocess a source file
-src/map_plan_online.cpp.i:
-	$(MAKE) -f CMakeFiles/step_plan_online.dir/build.make CMakeFiles/step_plan_online.dir/src/map_plan_online.cpp.i
-.PHONY : src/map_plan_online.cpp.i
+src/foot_interface_ocu.cpp.i:
+	$(MAKE) -f CMakeFiles/foot_interface_ocu.dir/build.make CMakeFiles/foot_interface_ocu.dir/src/foot_interface_ocu.cpp.i
+.PHONY : src/foot_interface_ocu.cpp.i
 
-src/map_plan_online.s: src/map_plan_online.cpp.s
-.PHONY : src/map_plan_online.s
+src/foot_interface_ocu.s: src/foot_interface_ocu.cpp.s
+.PHONY : src/foot_interface_ocu.s
 
 # target to generate assembly for a file
-src/map_plan_online.cpp.s:
-	$(MAKE) -f CMakeFiles/step_plan_online.dir/build.make CMakeFiles/step_plan_online.dir/src/map_plan_online.cpp.s
-.PHONY : src/map_plan_online.cpp.s
+src/foot_interface_ocu.cpp.s:
+	$(MAKE) -f CMakeFiles/foot_interface_ocu.dir/build.make CMakeFiles/foot_interface_ocu.dir/src/foot_interface_ocu.cpp.s
+.PHONY : src/foot_interface_ocu.cpp.s
+
+src/map_plan_all.o: src/map_plan_all.cpp.o
+.PHONY : src/map_plan_all.o
+
+# target to build an object file
+src/map_plan_all.cpp.o:
+	$(MAKE) -f CMakeFiles/step_plan_all.dir/build.make CMakeFiles/step_plan_all.dir/src/map_plan_all.cpp.o
+.PHONY : src/map_plan_all.cpp.o
+
+src/map_plan_all.i: src/map_plan_all.cpp.i
+.PHONY : src/map_plan_all.i
+
+# target to preprocess a source file
+src/map_plan_all.cpp.i:
+	$(MAKE) -f CMakeFiles/step_plan_all.dir/build.make CMakeFiles/step_plan_all.dir/src/map_plan_all.cpp.i
+.PHONY : src/map_plan_all.cpp.i
+
+src/map_plan_all.s: src/map_plan_all.cpp.s
+.PHONY : src/map_plan_all.s
+
+# target to generate assembly for a file
+src/map_plan_all.cpp.s:
+	$(MAKE) -f CMakeFiles/step_plan_all.dir/build.make CMakeFiles/step_plan_all.dir/src/map_plan_all.cpp.s
+.PHONY : src/map_plan_all.cpp.s
+
+src/map_plan_ocu.o: src/map_plan_ocu.cpp.o
+.PHONY : src/map_plan_ocu.o
+
+# target to build an object file
+src/map_plan_ocu.cpp.o:
+	$(MAKE) -f CMakeFiles/step_plan_ocu.dir/build.make CMakeFiles/step_plan_ocu.dir/src/map_plan_ocu.cpp.o
+.PHONY : src/map_plan_ocu.cpp.o
+
+src/map_plan_ocu.i: src/map_plan_ocu.cpp.i
+.PHONY : src/map_plan_ocu.i
+
+# target to preprocess a source file
+src/map_plan_ocu.cpp.i:
+	$(MAKE) -f CMakeFiles/step_plan_ocu.dir/build.make CMakeFiles/step_plan_ocu.dir/src/map_plan_ocu.cpp.i
+.PHONY : src/map_plan_ocu.cpp.i
+
+src/map_plan_ocu.s: src/map_plan_ocu.cpp.s
+.PHONY : src/map_plan_ocu.s
+
+# target to generate assembly for a file
+src/map_plan_ocu.cpp.s:
+	$(MAKE) -f CMakeFiles/step_plan_ocu.dir/build.make CMakeFiles/step_plan_ocu.dir/src/map_plan_ocu.cpp.s
+.PHONY : src/map_plan_ocu.cpp.s
 
 # Help Target
 help:
@@ -584,9 +698,11 @@ help:
 	@echo "... _catkin_empty_exported_target"
 	@echo "... clean_test_results"
 	@echo "... cloud_assembler"
+	@echo "... cloud_assembler_ocu"
 	@echo "... doxygen"
 	@echo "... edit_cache"
 	@echo "... foot_interface_all"
+	@echo "... foot_interface_ocu"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
@@ -600,7 +716,8 @@ help:
 	@echo "... rospack_genmsg_libexe"
 	@echo "... rospack_gensrv"
 	@echo "... run_tests"
-	@echo "... step_plan_online"
+	@echo "... step_plan_all"
+	@echo "... step_plan_ocu"
 	@echo "... test"
 	@echo "... test-future"
 	@echo "... test-results"
@@ -614,12 +731,21 @@ help:
 	@echo "... src/cloud_assembler.o"
 	@echo "... src/cloud_assembler.i"
 	@echo "... src/cloud_assembler.s"
+	@echo "... src/cloud_assembler_ocu.o"
+	@echo "... src/cloud_assembler_ocu.i"
+	@echo "... src/cloud_assembler_ocu.s"
 	@echo "... src/foot_interface_all.o"
 	@echo "... src/foot_interface_all.i"
 	@echo "... src/foot_interface_all.s"
-	@echo "... src/map_plan_online.o"
-	@echo "... src/map_plan_online.i"
-	@echo "... src/map_plan_online.s"
+	@echo "... src/foot_interface_ocu.o"
+	@echo "... src/foot_interface_ocu.i"
+	@echo "... src/foot_interface_ocu.s"
+	@echo "... src/map_plan_all.o"
+	@echo "... src/map_plan_all.i"
+	@echo "... src/map_plan_all.s"
+	@echo "... src/map_plan_ocu.o"
+	@echo "... src/map_plan_ocu.i"
+	@echo "... src/map_plan_ocu.s"
 .PHONY : help
 
 

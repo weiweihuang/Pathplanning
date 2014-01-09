@@ -1,0 +1,11 @@
+<launch>	
+
+
+  <node pkg="car_drive_control" type="cloud_assembler" name="cloud_assembler" output="screen">
+    </node>
+
+  <node pkg="car_drive_control" type="auto_car_control" name="auto_car_control" output="screen">
+    </node>
+
+
+</launch>

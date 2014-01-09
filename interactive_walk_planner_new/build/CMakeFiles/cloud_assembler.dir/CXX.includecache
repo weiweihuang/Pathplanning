@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/src/cloud_assembler.cpp
+/home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/src/cloud_assembler.cpp
 ros/ros.h
 -
 sensor_msgs/LaserScan.h

@@ -1,0 +1,345 @@
+/*
+ * Copyright 2012 Open Source Robotics Foundation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+*/
+
+#include <map>
+#include <string>
+#include <stdlib.h>
+
+#include <gazebo/transport/transport.hh>
+#include <gazebo/physics/CylinderShape.hh>
+#include "VRCPlugin.h"
+
+namespace gazebo
+{
+GZ_REGISTER_WORLD_PLUGIN(VRCPlugin)
+
+////////////////////////////////////////////////////////////////////////////////
+// Constructor
+VRCPlugin::VRCPlugin()
+{
+  /// initial anchor pose
+  this->warpRobotWithCmdVel = false;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Destructor
+VRCPlugin::~VRCPlugin()
+{
+  event::Events::DisconnectWorldUpdateBegin(this->updateConnection);
+  this->rosNode->shutdown();
+  this->rosQueue.clear();
+  this->rosQueue.disable();
+  this->callbackQueueThread.join();
+  delete this->rosNode;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Load the controller
+void VRCPlugin::Load(physics::WorldPtr _parent, sdf::ElementPtr _sdf)
+{
+  // save pointers
+  this->world = _parent;
+  this->sdf = _sdf;
+
+  // ros callback queue for processing subscription
+  // this->deferredLoadThread = boost::thread(
+  //   boost::bind(&VRCPlugin::DeferredLoad, this));
+  this->DeferredLoad();
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Load the controller
+void VRCPlugin::DeferredLoad()
+{
+  // initialize ros
+  if (!ros::isInitialized())
+  {
+    gzerr << "Not loading vrc plugin since ROS hasn't been "
+          << "properly initialized.  Try starting gazebo with ros plugin:\n"
+          << "  gazebo -s libgazebo_ros_api_plugin.so\n";
+    return;
+  }
+
+  // Load Vehicle
+  this->drcVehicle.Load(this->world, this->sdf);
+
+  // Mechanism for Updating every World Cycle
+  // Listen to the update event. This event is broadcast every
+  // simulation iteration.
+  this->updateConnection = event::Events::ConnectWorldUpdateBegin(
+     boost::bind(&VRCPlugin::UpdateStates, this));
+
+}
+
+
+// Play the trajectory, update states
+void VRCPlugin::UpdateStates()
+{
+
+  if (this->atlas.startupSequence == Robot::NONE)
+  {
+    // Load and Spawn Robot
+    this->atlas.InsertModel(this->world, this->sdf);
+    this->atlas.startupSequence = Robot::SPAWN_QUEUED;
+    //ROS_INFO("joint [%s].",this->atlas.pinLink);
+
+  }
+  else if (this->atlas.startupSequence == Robot::SPAWN_QUEUED)
+  {
+   if (this->atlas.CheckGetModel(this->world))
+    {
+      this->atlas.startupSequence = Robot::SPAWN_SUCCESS;
+    }
+  }
+  else if (this->atlas.startupSequence == Robot::SPAWN_SUCCESS)
+  {
+
+
+ 
+    this->vehicleRobotJoint = this->AddJoint(this->world,
+                                       this->drcVehicle.model,
+                                       this->drcVehicle.seatLink,
+                                       this->atlas.pinLink,
+                                       "revolute",
+                                       math::Vector3(0, 0, 0),
+                                       math::Vector3(0, 1, 0),
+                                       0.5, 0.5);
+
+/*
+    // pinning robot, and turning off effect of gravity
+    if (this->vehicleRobotJoint)
+      this->RemoveJoint(this->vehicleRobotJoint);
+
+    if (!this->atlas.pinJoint)
+      this->atlas.pinJoint = this->AddJoint(this->world,
+                                        this->atlas.model,
+                                        this->drcVehicle.seatLink,
+                                        this->atlas.pinLink,
+                                        "revolute",
+                                        math::Vector3(0, 0, 0),
+                                        math::Vector3(0, 0, 1),
+                                        0.0, 0.0);
+    this->atlas.initialPose = this->atlas.pinLink->GetWorldPose();
+*/
+    this->atlas.startupSequence = Robot::INITIALIZED;	
+  }
+  else if (this->atlas.startupSequence == Robot::INITIALIZED)
+  {
+    // done, do nothing
+    //ROS_INFO("Enter the desired mode.");	
+  }
+  else
+  {
+    ROS_INFO("Wrong.");
+    // should not be here
+  }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////
+void VRCPlugin::Vehicle::Load(physics::WorldPtr _world, sdf::ElementPtr _sdf)
+{
+  this->isInitialized = false;
+  // load parameters
+  if (_sdf->HasElement("drc_vehicle") &&
+      _sdf->GetElement("drc_vehicle")->HasElement("model_name"))
+  {
+    this->model = _world->GetModel(_sdf->GetElement("drc_vehicle")
+                        ->Get<std::string>("model_name"));
+  }
+  else
+  {
+    ROS_INFO("Can't find <drc_vehicle><model_name> blocks. using default.");
+    this->model = _world->GetModel("drc_vehicle");
+  }
+
+  if (!this->model)
+  {
+    ROS_DEBUG("drc vehicle not found.");
+    return;
+  }
+
+  if (_sdf->HasElement("drc_vehicle") &&
+      _sdf->GetElement("drc_vehicle")->HasElement("seat_link"))
+  {
+    this->seatLink = this->model->GetLink(_sdf->GetElement("drc_vehicle")
+                        ->Get<std::string>("seat_link"));
+  }
+  else
+  {
+    ROS_INFO("Can't find <drc_vehicle><seat_link> blocks, using default.");
+    this->seatLink = this->model->GetLink("chassis");
+  }
+
+  if (!this->seatLink)
+  {
+    ROS_ERROR("drc vehicle seat link not found.");
+    return;
+  }
+
+  // Note: hardcoded link by name: @todo: make this a pugin param
+  this->initialPose = this->seatLink->GetWorldPose();
+  this->isInitialized = true;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+VRCPlugin::Robot::Robot()
+{
+  this->startupSequence = Robot::NONE;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+VRCPlugin::Robot::~Robot()
+{
+}
+
+////////////////////////////////////////////////////////////////////////////////
+void VRCPlugin::Robot::InsertModel(physics::WorldPtr _world,
+  sdf::ElementPtr _sdf)
+{
+
+  // changed by ros param
+  this->spawnPose = math::Pose(0, 0, 0, 0, 0, 0);
+
+  // default names, can be changed in SDF
+  this->modelName = "atlas";
+  this->pinLinkName = "head";
+  std::string spawnPoseName = "robot_initial_pose";
+  std::string robotDescriptionName = "robot_description";
+
+  // load parameters
+
+    // try spawn model from "robot_description" on ros parameter server
+    ros::NodeHandle rh("");
+
+    double x, y, z, roll, pitch, yaw;
+    if (rh.getParam(spawnPoseName + "/x", x) &&
+        rh.getParam(spawnPoseName + "/y", y) &&
+        rh.getParam(spawnPoseName + "/z", z) &&
+        rh.getParam(spawnPoseName + "/roll", roll) &&
+        rh.getParam(spawnPoseName + "/pitch", pitch) &&
+        rh.getParam(spawnPoseName + "/yaw", yaw))
+    {
+      this->spawnPose.pos = math::Vector3(x, y, z);
+      this->spawnPose.rot = math::Vector3(roll, pitch, yaw);
+    }
+    else
+      ROS_ERROR("robot initial spawn pose not found");
+
+    std::string robotStr;
+    if (rh.getParam(robotDescriptionName, robotStr))
+    {
+      // put model into gazebo factory queue (non-blocking)
+      _world->InsertModelString(robotStr);
+      ROS_INFO("multisense model pushed into gazebo spawn queue.");
+    }
+    else
+    {
+      ROS_ERROR("failed to spawn model from rosparam: [%s].",
+        robotDescriptionName.c_str());
+      return;
+    }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////
+bool VRCPlugin::Robot::CheckGetModel(physics::WorldPtr _world)
+{
+  this->model = _world->GetModel(this->modelName);
+  if (this->model)
+  {
+    this->pinLink = this->model->GetLink(this->pinLinkName);
+
+    if (!this->pinLink)
+    {
+      ROS_ERROR("multisense robot pin link not found, VRCPlugin will not work.");
+      return false;
+    }
+
+    ROS_INFO("multisense pinLink successful.");	
+
+    // initial pose specified by user in ros param under robot_initial_pose
+    // gzdbg << "spawnPose [" << this->spawnPose << "]\n";
+    // this->model->SetInitialRelativePose(this->spawnPose);
+    this->model->SetWorldPose(this->spawnPose);
+
+    // Note: hardcoded link by name: @todo: make this a pugin param
+    this->initialPose = this->pinLink->GetWorldPose();
+
+    return true;
+  }
+  ROS_INFO("multisense model not founded.");	
+  return false;
+}
+
+// dynamically add joint between 2 links
+physics::JointPtr VRCPlugin::AddJoint(physics::WorldPtr _world,
+                                      physics::ModelPtr _model,
+                                      physics::LinkPtr _link1,
+                                      physics::LinkPtr _link2,
+                                      std::string _type,
+                                      math::Vector3 _anchor,
+                                      math::Vector3 _axis,
+                                      double _upper, double _lower)
+{
+  physics::JointPtr joint = _world->GetPhysicsEngine()->CreateJoint(
+    _type, _model);
+  joint->Attach(_link1, _link2);
+  // load adds the joint to a vector of shared pointers kept
+  // in parent and child links, preventing joint from being destroyed.
+  joint->Load(_link1, _link2, math::Pose(_anchor, math::Quaternion()));
+  // joint->SetAnchor(0, _anchor);
+  joint->SetAxis(0, _axis);
+  joint->SetHighStop(0, _upper);
+  joint->SetLowStop(0, _lower);
+
+  if (_link1)
+    joint->SetName(_link1->GetName() + std::string("_") +
+                              _link2->GetName() + std::string("_joint"));
+  else
+    joint->SetName(std::string("world_") +
+                              _link2->GetName() + std::string("_joint"));
+  joint->Init();
+
+
+
+  return joint;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// remove a joint
+void VRCPlugin::RemoveJoint(physics::JointPtr &_joint)
+{
+  bool paused = this->world->IsPaused();
+  this->world->SetPaused(true);
+  if (_joint)
+  {
+    // reenable collision between the link pair
+    physics::LinkPtr parent = _joint->GetParent();
+    physics::LinkPtr child = _joint->GetChild();
+    if (parent)
+      parent->SetCollideMode("all");
+    if (child)
+      child->SetCollideMode("all");
+
+    _joint->Detach();
+    _joint.reset();
+  }
+  this->world->SetPaused(paused);
+}
+
+}

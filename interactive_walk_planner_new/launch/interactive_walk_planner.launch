@@ -1,4 +1,4 @@
-<launch>	
+<launch>        
 
 
   <node pkg="interactive_walk_planner" type="cloud_assembler_ocu" name="cloud_assembler_ocu" output="screen">
@@ -8,8 +8,10 @@
     </node>
 
   <node pkg="interactive_walk_planner" type="step_plan" name="step_plan" output="screen">
-  <param name="action_path"  value="$(find interactive_walk_planner)/action_sets/" />
+  <param name="action_path" value="$(find interactive_walk_planner)/action_sets/" />
     </node>
 
 
 </launch>
+
+

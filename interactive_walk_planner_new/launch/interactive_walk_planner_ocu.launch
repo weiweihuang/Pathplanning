@@ -1,14 +1,14 @@
-<launch>	
+<launch>        
 
 
   <node pkg="interactive_walk_planner" type="cloud_assembler_ocu" name="cloud_assembler_ocu" output="screen">
     </node>
 
-  <node pkg="interactive_walk_planner" type="foot_interface" name="foot_interface" output="screen">
+  <node pkg="interactive_walk_planner" type="foot_interface_ocu" name="foot_interface_ocu" output="screen">
     </node>
 
-  <node pkg="interactive_walk_planner" type="step_plan_online" name="step_plan_online" output="screen">
-  <param name="action_path"  value="$(find interactive_walk_planner)/action_sets/" />
+  <node pkg="interactive_walk_planner" type="step_plan_ocu" name="step_plan_ocu" output="screen">
+  <param name="action_path" value="$(find interactive_walk_planner)/action_sets/" />
     </node>
 
 

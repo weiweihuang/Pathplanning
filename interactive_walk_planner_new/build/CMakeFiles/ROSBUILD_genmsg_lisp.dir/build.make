@@ -32,265 +32,31 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new
+CMAKE_SOURCE_DIR = /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build
+CMAKE_BINARY_DIR = /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build
 
 # Utility rule file for ROSBUILD_genmsg_lisp.
 
 # Include the progress variables for this target.
 include CMakeFiles/ROSBUILD_genmsg_lisp.dir/progress.make
 
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/goal_pose.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_goal_pose.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/task_mode.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_task_mode.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/foot_sequence.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_foot_sequence.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/replan.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_replan.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/task_mode.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_task_mode.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/orientation.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_orientation.lisp
-
-../msg_gen/lisp/goal_pose.lisp: ../msg/goal_pose.msg
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../msg_gen/lisp/goal_pose.lisp: ../manifest.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rospy/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/lisp/goal_pose.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/trajectory_msgs/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/gencpp/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/genlisp/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/message_generation/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/actionlib_msgs/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/osrf_msgs/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/sandia_hand_msgs/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/control_msgs/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/atlas_msgs/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/opencv2/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/cv_bridge/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/message_filters/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/console_bridge/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/class_loader/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/pluginlib/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/image_transport/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/tf/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/flann/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/topic_tools/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosbag/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/pcl_msgs/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/pcl/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosmsg/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosservice/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/dynamic_reconfigure/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/bond/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/smclib/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/bondcpp/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/nodelet/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/nodelet_topic_tools/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/pcl_ros/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/angles/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/laser_geometry/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/visualization_msgs/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosclean/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosmaster/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosout/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosparam/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roslaunch/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosunit/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rostest/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/std_srvs/package.xml
-../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/interactive_markers/package.xml
-../msg_gen/lisp/goal_pose.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
-../msg_gen/lisp/goal_pose.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/goal_pose.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_goal_pose.lisp"
-	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/goal_pose.msg
-
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/goal_pose.lisp
-
-../msg_gen/lisp/_package_goal_pose.lisp: ../msg_gen/lisp/goal_pose.lisp
-
-../msg_gen/lisp/task_mode.lisp: ../msg/task_mode.msg
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../msg_gen/lisp/task_mode.lisp: ../manifest.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rospy/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/lisp/task_mode.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/trajectory_msgs/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/gencpp/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/genlisp/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/message_generation/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/actionlib_msgs/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/osrf_msgs/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/sandia_hand_msgs/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/control_msgs/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/atlas_msgs/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/opencv2/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/cv_bridge/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/message_filters/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/console_bridge/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/class_loader/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/pluginlib/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/image_transport/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/tf/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/flann/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/topic_tools/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosbag/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/pcl_msgs/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/pcl/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosmsg/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosservice/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/dynamic_reconfigure/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/bond/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/smclib/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/bondcpp/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/nodelet/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/nodelet_topic_tools/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/pcl_ros/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/angles/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/laser_geometry/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/visualization_msgs/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosclean/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosmaster/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosout/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosparam/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roslaunch/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosunit/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rostest/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/std_srvs/package.xml
-../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/interactive_markers/package.xml
-../msg_gen/lisp/task_mode.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
-../msg_gen/lisp/task_mode.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/task_mode.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_task_mode.lisp"
-	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/task_mode.msg
-
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/task_mode.lisp
-
-../msg_gen/lisp/_package_task_mode.lisp: ../msg_gen/lisp/task_mode.lisp
-
-../msg_gen/lisp/foot_sequence.lisp: ../msg/foot_sequence.msg
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../msg_gen/lisp/foot_sequence.lisp: ../manifest.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rospy/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/trajectory_msgs/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/gencpp/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/genlisp/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/message_generation/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/actionlib_msgs/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/osrf_msgs/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/sandia_hand_msgs/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/control_msgs/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/atlas_msgs/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/opencv2/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/cv_bridge/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/message_filters/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/console_bridge/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/class_loader/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/pluginlib/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/image_transport/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/tf/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/flann/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/topic_tools/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosbag/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/pcl_msgs/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/pcl/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosmsg/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosservice/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/dynamic_reconfigure/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/bond/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/smclib/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/bondcpp/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/nodelet/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/nodelet_topic_tools/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/pcl_ros/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/angles/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/laser_geometry/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/visualization_msgs/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosclean/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosmaster/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosout/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosparam/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roslaunch/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosunit/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rostest/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/std_srvs/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/interactive_markers/package.xml
-../msg_gen/lisp/foot_sequence.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
-../msg_gen/lisp/foot_sequence.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/foot_sequence.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_foot_sequence.lisp"
-	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/foot_sequence.msg
-
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/foot_sequence.lisp
-
-../msg_gen/lisp/_package_foot_sequence.lisp: ../msg_gen/lisp/foot_sequence.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/foot_sequence.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_foot_sequence.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/goal_pose.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_goal_pose.lisp
 
 ../msg_gen/lisp/replan.lisp: ../msg/replan.msg
 ../msg_gen/lisp/replan.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
@@ -316,7 +82,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_orientation.lisp
 ../msg_gen/lisp/replan.lisp: /opt/ros/groovy/share/rospy/package.xml
 ../msg_gen/lisp/replan.lisp: /opt/ros/groovy/share/geometry_msgs/package.xml
 ../msg_gen/lisp/replan.lisp: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/lisp/replan.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
+../msg_gen/lisp/replan.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
 ../msg_gen/lisp/replan.lisp: /opt/ros/groovy/share/trajectory_msgs/package.xml
 ../msg_gen/lisp/replan.lisp: /opt/ros/groovy/share/gencpp/package.xml
 ../msg_gen/lisp/replan.lisp: /opt/ros/groovy/share/genlisp/package.xml
@@ -360,15 +126,93 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_orientation.lisp
 ../msg_gen/lisp/replan.lisp: /opt/ros/groovy/share/rostest/package.xml
 ../msg_gen/lisp/replan.lisp: /opt/ros/groovy/share/std_srvs/package.xml
 ../msg_gen/lisp/replan.lisp: /opt/ros/groovy/share/interactive_markers/package.xml
-../msg_gen/lisp/replan.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
-../msg_gen/lisp/replan.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_4)
+../msg_gen/lisp/replan.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
+../msg_gen/lisp/replan.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/replan.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_replan.lisp"
-	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/replan.msg
+	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/replan.msg
 
 ../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/replan.lisp
 
 ../msg_gen/lisp/_package_replan.lisp: ../msg_gen/lisp/replan.lisp
+
+../msg_gen/lisp/task_mode.lisp: ../msg/task_mode.msg
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/lisp/task_mode.lisp: ../manifest.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosgraph/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roslib/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rospy/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/geometry_msgs/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/sensor_msgs/package.xml
+../msg_gen/lisp/task_mode.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/trajectory_msgs/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/gencpp/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/genlisp/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/message_generation/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/actionlib_msgs/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/osrf_msgs/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/sandia_hand_msgs/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/control_msgs/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/atlas_msgs/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/opencv2/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/cv_bridge/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/message_filters/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/console_bridge/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/class_loader/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/pluginlib/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/image_transport/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/tf/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/flann/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/topic_tools/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosbag/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/pcl_msgs/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/pcl/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosmsg/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosservice/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/dynamic_reconfigure/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/bond/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/smclib/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/bondcpp/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/nodelet/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/nodelet_topic_tools/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/pcl_ros/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/angles/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/laser_geometry/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/visualization_msgs/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosclean/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosmaster/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosout/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosparam/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/roslaunch/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rosunit/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/rostest/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/std_srvs/package.xml
+../msg_gen/lisp/task_mode.lisp: /opt/ros/groovy/share/interactive_markers/package.xml
+../msg_gen/lisp/task_mode.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
+../msg_gen/lisp/task_mode.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/task_mode.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_task_mode.lisp"
+	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/task_mode.msg
+
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/task_mode.lisp
+
+../msg_gen/lisp/_package_task_mode.lisp: ../msg_gen/lisp/task_mode.lisp
 
 ../msg_gen/lisp/orientation.lisp: ../msg/orientation.msg
 ../msg_gen/lisp/orientation.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
@@ -394,7 +238,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_orientation.lisp
 ../msg_gen/lisp/orientation.lisp: /opt/ros/groovy/share/rospy/package.xml
 ../msg_gen/lisp/orientation.lisp: /opt/ros/groovy/share/geometry_msgs/package.xml
 ../msg_gen/lisp/orientation.lisp: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/lisp/orientation.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
+../msg_gen/lisp/orientation.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
 ../msg_gen/lisp/orientation.lisp: /opt/ros/groovy/share/trajectory_msgs/package.xml
 ../msg_gen/lisp/orientation.lisp: /opt/ros/groovy/share/gencpp/package.xml
 ../msg_gen/lisp/orientation.lisp: /opt/ros/groovy/share/genlisp/package.xml
@@ -438,32 +282,188 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_orientation.lisp
 ../msg_gen/lisp/orientation.lisp: /opt/ros/groovy/share/rostest/package.xml
 ../msg_gen/lisp/orientation.lisp: /opt/ros/groovy/share/std_srvs/package.xml
 ../msg_gen/lisp/orientation.lisp: /opt/ros/groovy/share/interactive_markers/package.xml
-../msg_gen/lisp/orientation.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
-../msg_gen/lisp/orientation.lisp: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_5)
+../msg_gen/lisp/orientation.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
+../msg_gen/lisp/orientation.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/orientation.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_orientation.lisp"
-	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/orientation.msg
+	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/orientation.msg
 
 ../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/orientation.lisp
 
 ../msg_gen/lisp/_package_orientation.lisp: ../msg_gen/lisp/orientation.lisp
 
+../msg_gen/lisp/foot_sequence.lisp: ../msg/foot_sequence.msg
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/lisp/foot_sequence.lisp: ../manifest.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosgraph/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roslib/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rospy/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/geometry_msgs/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/sensor_msgs/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/trajectory_msgs/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/gencpp/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/genlisp/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/message_generation/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/actionlib_msgs/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/osrf_msgs/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/sandia_hand_msgs/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/control_msgs/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/atlas_msgs/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/opencv2/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/cv_bridge/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/message_filters/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/console_bridge/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/class_loader/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/pluginlib/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/image_transport/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/tf/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/flann/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/topic_tools/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosbag/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/pcl_msgs/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/pcl/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosmsg/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosservice/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/dynamic_reconfigure/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/bond/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/smclib/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/bondcpp/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/nodelet/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/nodelet_topic_tools/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/pcl_ros/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/angles/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/laser_geometry/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/visualization_msgs/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosclean/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosmaster/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosout/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosparam/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/roslaunch/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rosunit/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/rostest/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/std_srvs/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /opt/ros/groovy/share/interactive_markers/package.xml
+../msg_gen/lisp/foot_sequence.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
+../msg_gen/lisp/foot_sequence.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/foot_sequence.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_foot_sequence.lisp"
+	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/foot_sequence.msg
+
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/foot_sequence.lisp
+
+../msg_gen/lisp/_package_foot_sequence.lisp: ../msg_gen/lisp/foot_sequence.lisp
+
+../msg_gen/lisp/goal_pose.lisp: ../msg/goal_pose.msg
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/lisp/goal_pose.lisp: ../manifest.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosgraph/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roslib/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rospy/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/geometry_msgs/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/sensor_msgs/package.xml
+../msg_gen/lisp/goal_pose.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/trajectory_msgs/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/gencpp/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/genlisp/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/message_generation/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/actionlib_msgs/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/osrf_msgs/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/sandia_hand_msgs/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/control_msgs/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/atlas_msgs/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/opencv2/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/cv_bridge/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/message_filters/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/console_bridge/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/class_loader/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/pluginlib/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/image_transport/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/tf/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/flann/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/topic_tools/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosbag/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/pcl_msgs/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/pcl/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosmsg/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosservice/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/dynamic_reconfigure/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/bond/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/smclib/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/bondcpp/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/nodelet/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/nodelet_topic_tools/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/pcl_ros/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/angles/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/laser_geometry/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/visualization_msgs/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosclean/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosmaster/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosout/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosparam/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/roslaunch/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rosunit/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/rostest/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/std_srvs/package.xml
+../msg_gen/lisp/goal_pose.lisp: /opt/ros/groovy/share/interactive_markers/package.xml
+../msg_gen/lisp/goal_pose.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
+../msg_gen/lisp/goal_pose.lisp: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/goal_pose.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_goal_pose.lisp"
+	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/goal_pose.msg
+
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/goal_pose.lisp
+
+../msg_gen/lisp/_package_goal_pose.lisp: ../msg_gen/lisp/goal_pose.lisp
+
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/goal_pose.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_goal_pose.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/task_mode.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_task_mode.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/foot_sequence.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_foot_sequence.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/replan.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_replan.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/task_mode.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_task_mode.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/orientation.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_orientation.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/foot_sequence.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_foot_sequence.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/goal_pose.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_goal_pose.lisp
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp.dir/build.make
 .PHONY : ROSBUILD_genmsg_lisp
 
@@ -476,6 +476,6 @@ CMakeFiles/ROSBUILD_genmsg_lisp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_lisp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_lisp.dir/depend:
-	cd /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_lisp.dir/depend
 

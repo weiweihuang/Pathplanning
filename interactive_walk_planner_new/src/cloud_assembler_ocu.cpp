@@ -1,9 +1,9 @@
 /*
- * cloud_assembler.cpp
- *
- *  Created on: April 16, 2013
- *      Author: Weiwei Huang
- */
+* cloud_assembler.cpp
+*
+* Created on: April 16, 2013
+* Author: Weiwei Huang
+*/
 
 #include <ros/ros.h>
 #include <sensor_msgs/LaserScan.h>
@@ -82,7 +82,7 @@ namespace cloud_assembler
     addToBuffer(*cloud);
 
     if (count ==20){
-      count = 0; 	
+      count = 0;         
       assembleCloud();
       sensor_msgs::PointCloud2 cloud_msg;
       pcl::toROSMsg(assembled_cloud_, cloud_msg);
@@ -90,7 +90,7 @@ namespace cloud_assembler
       cloud_msg.header.stamp = ros::Time::now();
       output_pub_.publish(cloud_msg);
     }
-    count++; 
+    count++;
   }
 
   void CloudAssembler::assembleCloud()

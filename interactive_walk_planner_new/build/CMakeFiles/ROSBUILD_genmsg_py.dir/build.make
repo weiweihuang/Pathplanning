@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new
+CMAKE_SOURCE_DIR = /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build
+CMAKE_BINARY_DIR = /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build
 
 # Utility rule file for ROSBUILD_genmsg_py.
 
@@ -44,236 +44,14 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 
 CMakeFiles/ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/__init__.py
 
-../src/interactive_walk_planner_new/msg/__init__.py: ../src/interactive_walk_planner_new/msg/_goal_pose.py
-../src/interactive_walk_planner_new/msg/__init__.py: ../src/interactive_walk_planner_new/msg/_task_mode.py
-../src/interactive_walk_planner_new/msg/__init__.py: ../src/interactive_walk_planner_new/msg/_foot_sequence.py
 ../src/interactive_walk_planner_new/msg/__init__.py: ../src/interactive_walk_planner_new/msg/_replan.py
+../src/interactive_walk_planner_new/msg/__init__.py: ../src/interactive_walk_planner_new/msg/_task_mode.py
 ../src/interactive_walk_planner_new/msg/__init__.py: ../src/interactive_walk_planner_new/msg/_orientation.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_1)
+../src/interactive_walk_planner_new/msg/__init__.py: ../src/interactive_walk_planner_new/msg/_foot_sequence.py
+../src/interactive_walk_planner_new/msg/__init__.py: ../src/interactive_walk_planner_new/msg/_goal_pose.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/interactive_walk_planner_new/msg/__init__.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/goal_pose.msg /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/task_mode.msg /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/foot_sequence.msg /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/replan.msg /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/orientation.msg
-
-../src/interactive_walk_planner_new/msg/_goal_pose.py: ../msg/goal_pose.msg
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../src/interactive_walk_planner_new/msg/_goal_pose.py: ../manifest.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/cpp_common/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rostime/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/roscpp_traits/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/genmsg/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/genpy/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/message_runtime/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosconsole/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/std_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/roscpp/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosgraph/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/catkin/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rospack/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/roslib/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rospy/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/geometry_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/sensor_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/trajectory_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/gencpp/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/genlisp/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/message_generation/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/actionlib_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/osrf_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/sandia_hand_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/control_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/atlas_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/opencv2/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/cv_bridge/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/message_filters/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/console_bridge/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/class_loader/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/pluginlib/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/image_transport/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/tf/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/flann/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/topic_tools/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosbag/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/pcl_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/pcl/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosmsg/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosservice/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/dynamic_reconfigure/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/bond/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/smclib/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/bondcpp/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/nodelet/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/nodelet_topic_tools/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/pcl_ros/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/angles/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/laser_geometry/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/visualization_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosclean/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosmaster/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosout/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosparam/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/roslaunch/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosunit/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rostest/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/std_srvs/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/interactive_markers/package.xml
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
-../src/interactive_walk_planner_new/msg/_goal_pose.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/interactive_walk_planner_new/msg/_goal_pose.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/goal_pose.msg
-
-../src/interactive_walk_planner_new/msg/_task_mode.py: ../msg/task_mode.msg
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../src/interactive_walk_planner_new/msg/_task_mode.py: ../manifest.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/cpp_common/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rostime/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/roscpp_traits/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/genmsg/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/genpy/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/message_runtime/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosconsole/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/std_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/roscpp/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosgraph/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/catkin/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rospack/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/roslib/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rospy/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/geometry_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/sensor_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/trajectory_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/gencpp/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/genlisp/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/message_generation/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/actionlib_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/osrf_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/sandia_hand_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/control_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/atlas_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/opencv2/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/cv_bridge/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/message_filters/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/console_bridge/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/class_loader/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/pluginlib/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/image_transport/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/tf/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/flann/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/topic_tools/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosbag/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/pcl_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/pcl/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosmsg/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosservice/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/dynamic_reconfigure/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/bond/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/smclib/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/bondcpp/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/nodelet/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/nodelet_topic_tools/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/pcl_ros/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/angles/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/laser_geometry/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/visualization_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosclean/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosmaster/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosout/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosparam/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/roslaunch/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosunit/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rostest/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/std_srvs/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/interactive_markers/package.xml
-../src/interactive_walk_planner_new/msg/_task_mode.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
-../src/interactive_walk_planner_new/msg/_task_mode.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/interactive_walk_planner_new/msg/_task_mode.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/task_mode.msg
-
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: ../msg/foot_sequence.msg
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: ../manifest.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/cpp_common/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rostime/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/roscpp_traits/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/genmsg/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/genpy/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/message_runtime/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosconsole/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/std_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/roscpp/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosgraph/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/catkin/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rospack/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/roslib/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rospy/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/geometry_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/sensor_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/trajectory_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/gencpp/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/genlisp/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/message_generation/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/actionlib_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/osrf_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/sandia_hand_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/control_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/atlas_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/opencv2/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/cv_bridge/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/message_filters/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/console_bridge/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/class_loader/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/pluginlib/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/image_transport/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/tf/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/flann/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/topic_tools/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosbag/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/pcl_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/pcl/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosmsg/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosservice/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/dynamic_reconfigure/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/bond/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/smclib/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/bondcpp/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/nodelet/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/nodelet_topic_tools/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/pcl_ros/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/angles/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/laser_geometry/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/visualization_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosclean/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosmaster/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosout/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosparam/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/roslaunch/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosunit/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rostest/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/std_srvs/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/interactive_markers/package.xml
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
-../src/interactive_walk_planner_new/msg/_foot_sequence.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/interactive_walk_planner_new/msg/_foot_sequence.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/foot_sequence.msg
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/replan.msg /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/task_mode.msg /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/orientation.msg /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/foot_sequence.msg /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/goal_pose.msg
 
 ../src/interactive_walk_planner_new/msg/_replan.py: ../msg/replan.msg
 ../src/interactive_walk_planner_new/msg/_replan.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -299,7 +77,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/__init__.
 ../src/interactive_walk_planner_new/msg/_replan.py: /opt/ros/groovy/share/rospy/package.xml
 ../src/interactive_walk_planner_new/msg/_replan.py: /opt/ros/groovy/share/geometry_msgs/package.xml
 ../src/interactive_walk_planner_new/msg/_replan.py: /opt/ros/groovy/share/sensor_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_replan.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
+../src/interactive_walk_planner_new/msg/_replan.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
 ../src/interactive_walk_planner_new/msg/_replan.py: /opt/ros/groovy/share/trajectory_msgs/package.xml
 ../src/interactive_walk_planner_new/msg/_replan.py: /opt/ros/groovy/share/gencpp/package.xml
 ../src/interactive_walk_planner_new/msg/_replan.py: /opt/ros/groovy/share/genlisp/package.xml
@@ -343,11 +121,85 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/__init__.
 ../src/interactive_walk_planner_new/msg/_replan.py: /opt/ros/groovy/share/rostest/package.xml
 ../src/interactive_walk_planner_new/msg/_replan.py: /opt/ros/groovy/share/std_srvs/package.xml
 ../src/interactive_walk_planner_new/msg/_replan.py: /opt/ros/groovy/share/interactive_markers/package.xml
-../src/interactive_walk_planner_new/msg/_replan.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
-../src/interactive_walk_planner_new/msg/_replan.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_5)
+../src/interactive_walk_planner_new/msg/_replan.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
+../src/interactive_walk_planner_new/msg/_replan.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/interactive_walk_planner_new/msg/_replan.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/replan.msg
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/replan.msg
+
+../src/interactive_walk_planner_new/msg/_task_mode.py: ../msg/task_mode.msg
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../src/interactive_walk_planner_new/msg/_task_mode.py: ../manifest.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/cpp_common/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rostime/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/roscpp_traits/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/genmsg/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/genpy/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/message_runtime/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosconsole/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/std_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/roscpp/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosgraph/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/catkin/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rospack/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/roslib/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rospy/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/geometry_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/sensor_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/trajectory_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/gencpp/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/genlisp/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/message_generation/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/actionlib_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/osrf_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/sandia_hand_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/control_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/atlas_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/opencv2/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/cv_bridge/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/message_filters/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/console_bridge/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/class_loader/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/pluginlib/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/image_transport/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/tf/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/flann/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/topic_tools/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosbag/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/pcl_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/pcl/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosmsg/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosservice/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/dynamic_reconfigure/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/bond/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/smclib/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/bondcpp/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/nodelet/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/nodelet_topic_tools/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/pcl_ros/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/angles/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/laser_geometry/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/visualization_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosclean/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosmaster/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosout/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosparam/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/roslaunch/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rosunit/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/rostest/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/std_srvs/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /opt/ros/groovy/share/interactive_markers/package.xml
+../src/interactive_walk_planner_new/msg/_task_mode.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
+../src/interactive_walk_planner_new/msg/_task_mode.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/interactive_walk_planner_new/msg/_task_mode.py"
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/task_mode.msg
 
 ../src/interactive_walk_planner_new/msg/_orientation.py: ../msg/orientation.msg
 ../src/interactive_walk_planner_new/msg/_orientation.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -373,7 +225,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/__init__.
 ../src/interactive_walk_planner_new/msg/_orientation.py: /opt/ros/groovy/share/rospy/package.xml
 ../src/interactive_walk_planner_new/msg/_orientation.py: /opt/ros/groovy/share/geometry_msgs/package.xml
 ../src/interactive_walk_planner_new/msg/_orientation.py: /opt/ros/groovy/share/sensor_msgs/package.xml
-../src/interactive_walk_planner_new/msg/_orientation.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
+../src/interactive_walk_planner_new/msg/_orientation.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
 ../src/interactive_walk_planner_new/msg/_orientation.py: /opt/ros/groovy/share/trajectory_msgs/package.xml
 ../src/interactive_walk_planner_new/msg/_orientation.py: /opt/ros/groovy/share/gencpp/package.xml
 ../src/interactive_walk_planner_new/msg/_orientation.py: /opt/ros/groovy/share/genlisp/package.xml
@@ -417,19 +269,167 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/__init__.
 ../src/interactive_walk_planner_new/msg/_orientation.py: /opt/ros/groovy/share/rostest/package.xml
 ../src/interactive_walk_planner_new/msg/_orientation.py: /opt/ros/groovy/share/std_srvs/package.xml
 ../src/interactive_walk_planner_new/msg/_orientation.py: /opt/ros/groovy/share/interactive_markers/package.xml
-../src/interactive_walk_planner_new/msg/_orientation.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
-../src/interactive_walk_planner_new/msg/_orientation.py: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_6)
+../src/interactive_walk_planner_new/msg/_orientation.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
+../src/interactive_walk_planner_new/msg/_orientation.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/interactive_walk_planner_new/msg/_orientation.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/msg/orientation.msg
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/orientation.msg
+
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: ../msg/foot_sequence.msg
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: ../manifest.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/cpp_common/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rostime/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/roscpp_traits/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/genmsg/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/genpy/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/message_runtime/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosconsole/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/std_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/roscpp/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosgraph/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/catkin/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rospack/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/roslib/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rospy/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/geometry_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/sensor_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/trajectory_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/gencpp/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/genlisp/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/message_generation/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/actionlib_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/osrf_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/sandia_hand_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/control_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/atlas_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/opencv2/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/cv_bridge/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/message_filters/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/console_bridge/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/class_loader/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/pluginlib/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/image_transport/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/tf/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/flann/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/topic_tools/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosbag/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/pcl_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/pcl/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosmsg/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosservice/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/dynamic_reconfigure/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/bond/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/smclib/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/bondcpp/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/nodelet/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/nodelet_topic_tools/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/pcl_ros/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/angles/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/laser_geometry/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/visualization_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosclean/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosmaster/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosout/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosparam/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/roslaunch/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rosunit/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/rostest/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/std_srvs/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /opt/ros/groovy/share/interactive_markers/package.xml
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
+../src/interactive_walk_planner_new/msg/_foot_sequence.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/interactive_walk_planner_new/msg/_foot_sequence.py"
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/foot_sequence.msg
+
+../src/interactive_walk_planner_new/msg/_goal_pose.py: ../msg/goal_pose.msg
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../src/interactive_walk_planner_new/msg/_goal_pose.py: ../manifest.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/cpp_common/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rostime/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/roscpp_traits/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/genmsg/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/genpy/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/message_runtime/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosconsole/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/std_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/roscpp/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosgraph/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/catkin/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rospack/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/roslib/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rospy/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/geometry_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/sensor_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/trajectory_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/gencpp/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/genlisp/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/message_generation/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/actionlib_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/osrf_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/sandia_hand_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/control_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/atlas_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/opencv2/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/cv_bridge/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/message_filters/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/console_bridge/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/class_loader/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/pluginlib/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/image_transport/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/tf/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/flann/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/topic_tools/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosbag/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/pcl_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/pcl/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosmsg/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosservice/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/dynamic_reconfigure/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/bond/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/smclib/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/bondcpp/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/nodelet/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/nodelet_topic_tools/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/pcl_ros/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/angles/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/laser_geometry/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/visualization_msgs/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosclean/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosmaster/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosout/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosparam/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/roslaunch/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rosunit/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/rostest/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/std_srvs/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /opt/ros/groovy/share/interactive_markers/package.xml
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
+../src/interactive_walk_planner_new/msg/_goal_pose.py: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/interactive_walk_planner_new/msg/_goal_pose.py"
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/msg/goal_pose.msg
 
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
 ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/__init__.py
-ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/_goal_pose.py
-ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/_task_mode.py
-ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/_foot_sequence.py
 ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/_replan.py
+ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/_task_mode.py
 ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/_orientation.py
+ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/_foot_sequence.py
+ROSBUILD_genmsg_py: ../src/interactive_walk_planner_new/msg/_goal_pose.py
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py.dir/build.make
 .PHONY : ROSBUILD_genmsg_py
 
@@ -442,6 +442,6 @@ CMakeFiles/ROSBUILD_genmsg_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_py.dir/depend:
-	cd /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/depend
 

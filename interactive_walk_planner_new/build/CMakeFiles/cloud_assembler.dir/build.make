@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new
+CMAKE_SOURCE_DIR = /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build
+CMAKE_BINARY_DIR = /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cloud_assembler.dir/depend.make
@@ -68,7 +68,7 @@ CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /opt/ros/groovy/share/
 CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /opt/ros/groovy/share/rospy/package.xml
 CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /opt/ros/groovy/share/geometry_msgs/package.xml
 CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /opt/ros/groovy/share/sensor_msgs/package.xml
-CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
+CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
 CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /opt/ros/groovy/share/trajectory_msgs/package.xml
 CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /opt/ros/groovy/share/gencpp/package.xml
 CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /opt/ros/groovy/share/genlisp/package.xml
@@ -112,19 +112,19 @@ CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /opt/ros/groovy/share/
 CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /opt/ros/groovy/share/rostest/package.xml
 CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /opt/ros/groovy/share/std_srvs/package.xml
 CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /opt/ros/groovy/share/interactive_markers/package.xml
-CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
-CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
+CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o -c /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/src/cloud_assembler.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o -c /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/src/cloud_assembler.cpp
 
 CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/src/cloud_assembler.cpp > CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/src/cloud_assembler.cpp > CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.i
 
 CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/src/cloud_assembler.cpp -o CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/src/cloud_assembler.cpp -o CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.s
 
 CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o.requires:
 .PHONY : CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o.requires
@@ -192,6 +192,6 @@ CMakeFiles/cloud_assembler.dir/clean:
 .PHONY : CMakeFiles/cloud_assembler.dir/clean
 
 CMakeFiles/cloud_assembler.dir/depend:
-	cd /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles/cloud_assembler.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/cloud_assembler.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cloud_assembler.dir/depend
 

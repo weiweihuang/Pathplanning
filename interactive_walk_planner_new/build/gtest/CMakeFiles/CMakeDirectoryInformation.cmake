@@ -3,16 +3,16 @@
 
 # Relative path conversion top directories.
 SET(CMAKE_RELATIVE_PATH_TOP_SOURCE "/usr/src/gtest")
-SET(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build")
+SET(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build")
 
 # Force unix paths in dependencies.
 SET(CMAKE_FORCE_UNIX_PATHS 1)
 
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
-  "/home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/include"
-  "/home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/cpp/include"
-  "/home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/cpp/include"
+  "/home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/include"
+  "/home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/cpp/include"
+  "/home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/cpp/include"
   "/opt/ros/groovy/include"
   "/opt/ros/groovy/include/opencv"
   "/opt/ros/groovy/include/pcl-1.6"

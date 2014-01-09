@@ -42,7 +42,7 @@ astar.h: demo astar
 #define RIGHT 1
 
 // constants
-#define BIG_COST 1e8f  // big value for cost map
+#define BIG_COST 1e8f // big value for cost map
 #define BIG_VALUE 1e10f // big value for heuristic function
 
 // SHOULD BE VARIABLES
@@ -112,10 +112,10 @@ typedef struct astar_node
   struct astar_node *sibling;
 
   // next element in any q or list (priority_q, done_list)
-  struct astar_node *next; 
+  struct astar_node *next;
 
   // next element in location list
-  struct astar_node *location_next; 
+  struct astar_node *location_next;
 
   float cost_from_start;
   float one_step_cost;
@@ -160,8 +160,8 @@ typedef struct path_node
   float state[N_X]; // actually foot location
   float com[N_X]; // actually COM location
 
-  struct path_node *previous; 
-  struct path_node *next; 
+  struct path_node *previous;
+  struct path_node *next;
 
   float cost_from_start;
   float one_step_cost;
@@ -195,7 +195,7 @@ extern int astar_node_count; // needs to be global since free list shared across
 // all astar searches.
 extern TERRAIN *create_terrain();
 extern void terrain_indices( TERRAIN *tt, float x, float y,
-		      int *ix, int *iy, int *index );
+                 int *ix, int *iy, int *index );
 extern void generate_true_cost_map( TERRAIN *tt, float terrain_value[TERRAIN_N_X][TERRAIN_N_Y]);
 extern void generate_true_cost_map_old( TERRAIN *tt, unsigned int seed );
 extern ASTAR *create_astar( TERRAIN *tt );

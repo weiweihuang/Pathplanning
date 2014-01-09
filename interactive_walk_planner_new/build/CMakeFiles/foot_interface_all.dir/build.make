@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new
+CMAKE_SOURCE_DIR = /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build
+CMAKE_BINARY_DIR = /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/foot_interface_all.dir/depend.make
@@ -68,7 +68,7 @@ CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /opt/ros/groovy/
 CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /opt/ros/groovy/share/rospy/package.xml
 CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /opt/ros/groovy/share/geometry_msgs/package.xml
 CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /opt/ros/groovy/share/sensor_msgs/package.xml
-CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
+CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/manifest.xml
 CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /opt/ros/groovy/share/trajectory_msgs/package.xml
 CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /opt/ros/groovy/share/gencpp/package.xml
 CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /opt/ros/groovy/share/genlisp/package.xml
@@ -112,19 +112,19 @@ CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /opt/ros/groovy/
 CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /opt/ros/groovy/share/rostest/package.xml
 CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /opt/ros/groovy/share/std_srvs/package.xml
 CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /opt/ros/groovy/share/interactive_markers/package.xml
-CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
-CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /home/huangwei/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/msg_gen/generated
+CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o: /home/weiweihuang/groovy_workspace/wrecs/atlas_ros_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o -c /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/src/foot_interface_all.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o -c /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/src/foot_interface_all.cpp
 
 CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/src/foot_interface_all.cpp > CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/src/foot_interface_all.cpp > CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.i
 
 CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/src/foot_interface_all.cpp -o CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/src/foot_interface_all.cpp -o CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.s
 
 CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o.requires:
 .PHONY : CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.o.requires
@@ -160,6 +160,6 @@ CMakeFiles/foot_interface_all.dir/clean:
 .PHONY : CMakeFiles/foot_interface_all.dir/clean
 
 CMakeFiles/foot_interface_all.dir/depend:
-	cd /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build /home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/CMakeFiles/foot_interface_all.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/foot_interface_all.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/foot_interface_all.dir/depend
 

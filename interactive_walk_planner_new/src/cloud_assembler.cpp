@@ -1,9 +1,9 @@
 /*
- * cloud_assembler.cpp
- *
- *  Created on: April 16, 2013
- *      Author: Weiwei Huang
- */
+* cloud_assembler.cpp
+*
+* Created on: April 16, 2013
+* Author: Weiwei Huang
+*/
 
 #include <ros/ros.h>
 #include <sensor_msgs/LaserScan.h>
@@ -79,7 +79,7 @@ namespace cloud_assembler
     pause_srv_ = node_.advertiseService("/pause_assembler", &CloudAssembler::pauseSrv, this);
 
     //***********************************************************************************************//
-    laser_sub_.subscribe(node_, "/multisense_sl/laser/scan", 100);	
+    laser_sub_.subscribe(node_, "/multisense_sl/laser/scan", 100);        
     laser_notifier_ = new tf::MessageFilter<sensor_msgs::LaserScan>(laser_sub_, tf_, "/l_foot", 100);
     laser_notifier_->registerCallback( boost::bind(&CloudAssembler::scanCallback, this, _1) );
     //***********************************************************************************************//
@@ -96,11 +96,11 @@ namespace cloud_assembler
     sensor_msgs::LaserScan scan2;
     scan2 = *scan;
     // hack to remove the long distance value
-    scan2.range_min = 1.2f; 
-    scan2.range_max = 10.0f;  
+    scan2.range_min = 1.2f;
+    scan2.range_max = 10.0f;
     try{
 
-    	tf_.waitForTransform("/l_foot", scan->header.frame_id,ros::Time::now(), ros::Duration(1.0));
+            tf_.waitForTransform("/l_foot", scan->header.frame_id,ros::Time::now(), ros::Duration(1.0));
         projector_.transformLaserScanToPointCloud("/l_foot", scan2, cloud, tf_);
 
     }
@@ -114,7 +114,7 @@ namespace cloud_assembler
     addToBuffer(cloud);
 
     if (count ==50){
-      count = 0; 	
+      count = 0;         
       assembleCloud();
       sensor_msgs::PointCloud2 cloud_msg;
       pcl::toROSMsg(assembled_cloud_, cloud_msg);
@@ -122,7 +122,7 @@ namespace cloud_assembler
       cloud_msg.header.stamp = ros::Time::now();
       output_pub_.publish(cloud_msg);
     }
-    count++; 
+    count++;
   }
 
   void CloudAssembler::assembleCloud()

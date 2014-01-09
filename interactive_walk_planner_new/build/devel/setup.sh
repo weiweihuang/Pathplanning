@@ -8,7 +8,7 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
-: ${_CATKIN_SETUP_DIR:=/home/huangwei/groovy_workspace/pathplanning/interactive_walk_planner_new/build/devel}
+: ${_CATKIN_SETUP_DIR:=/home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/devel}
 _SETUP_UTIL="$_CATKIN_SETUP_DIR/_setup_util.py"
 unset _CATKIN_SETUP_DIR
 

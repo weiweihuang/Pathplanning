@@ -2,12 +2,12 @@ cmake_minimum_required(VERSION 2.4.6)
 include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
 
 
-# Set the build type.  Options are:
-#  Coverage       : w/ debug symbols, w/o optimization, w/ code-coverage
-#  Debug          : w/ debug symbols, w/o optimization
-#  Release        : w/o debug symbols, w/ optimization
-#  RelWithDebInfo : w/ debug symbols, w/ optimization
-#  MinSizeRel     : w/o debug symbols, w/ optimization, stripped binaries
+# Set the build type. Options are:
+# Coverage : w/ debug symbols, w/o optimization, w/ code-coverage
+# Debug : w/ debug symbols, w/o optimization
+# Release : w/o debug symbols, w/ optimization
+# RelWithDebInfo : w/ debug symbols, w/ optimization
+# MinSizeRel : w/o debug symbols, w/ optimization, stripped binaries
 #set(ROS_BUILD_TYPE RelWithDebInfo)
 
 rosbuild_init()
@@ -34,21 +34,30 @@ rosbuild_add_boost_directories()
 include_directories(/usr/include/vtk-5.8)
 
 find_package(PCL 1.6 REQUIRED)
-include_directories(${PCL_INCLUDE_DIRS}) 
-link_directories(${PCL_LIBRARY_DIRS}) 
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
 rosbuild_add_executable(cloud_assembler src/cloud_assembler.cpp)
 rosbuild_link_boost(cloud_assembler thread)
+rosbuild_add_executable(cloud_assembler_ocu src/cloud_assembler_ocu.cpp)
+rosbuild_link_boost(cloud_assembler_ocu thread)
 
-
-rosbuild_add_executable(foot_interface_all src/foot_interface_all.cpp) 
+rosbuild_add_executable(foot_interface_all src/foot_interface_all.cpp)
 rosbuild_link_boost(foot_interface_all thread)
+rosbuild_add_executable(foot_interface_ocu src/foot_interface_ocu.cpp)
+rosbuild_link_boost(foot_interface_ocu thread)
 
-rosbuild_add_executable(step_plan_online src/map_plan_online.cpp src/astar.cpp)
-rosbuild_link_boost(step_plan_online thread)
+rosbuild_add_executable(step_plan_all src/map_plan_all.cpp src/astar.cpp)
+rosbuild_link_boost(step_plan_all thread)
+rosbuild_add_executable(step_plan_ocu src/map_plan_ocu.cpp src/astar.cpp)
+rosbuild_link_boost(step_plan_ocu thread)
+
+
 
 target_link_libraries(cloud_assembler libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})
-target_link_libraries(step_plan_online libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})
+target_link_libraries(cloud_assembler_ocu libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})
+target_link_libraries(step_plan_all libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})
+target_link_libraries(step_plan_ocu libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})
 
 

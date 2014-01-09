@@ -38,17 +38,17 @@ include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS}) 
 add_definitions(${PCL_DEFINITIONS})
 
-#rosbuild_add_executable(cloud_assembler src/cloud_assembler.cpp)
-#rosbuild_link_boost(cloud_assembler thread)
+rosbuild_add_executable(cloud_assembler src/cloud_assembler.cpp)
+rosbuild_link_boost(cloud_assembler thread)
 
 
-#rosbuild_add_executable(foot_interface_all src/foot_interface_all.cpp) 
-#rosbuild_link_boost(foot_interface_all thread)
+rosbuild_add_executable(foot_interface_all src/foot_interface_all.cpp) 
+rosbuild_link_boost(foot_interface_all thread)
 
-#rosbuild_add_executable(step_plan_online src/map_plan_online.cpp src/astar.cpp)
-#rosbuild_link_boost(step_plan_online thread)
+rosbuild_add_executable(step_plan_online src/map_plan_online.cpp src/astar.cpp)
+rosbuild_link_boost(step_plan_online thread)
 
-#target_link_libraries(cloud_assembler libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})
-#target_link_libraries(step_plan_online libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})
+target_link_libraries(cloud_assembler libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})
+target_link_libraries(step_plan_online libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})
 
 
