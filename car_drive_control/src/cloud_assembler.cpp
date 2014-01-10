@@ -128,7 +128,7 @@ namespace cloud_assembler
     scan2 = *scan;
     // hack to remove the long distance value
     scan2.range_min = 0.1f; 
-    scan2.range_max = 10.0f;  
+    scan2.range_max = 15.0f;  
     try{
       //tf_.waitForTransform("/start_frame", scan->header.frame_id,ros::Time::now(), ros::Duration(1.0));	
       projector_.transformLaserScanToPointCloud("/start_frame", scan2, cloud, tf_);

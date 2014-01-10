@@ -47,7 +47,8 @@
 #include <tf/message_filter.h>
 #include <Eigen/Core>
 
-#define SIM_TIME 1200 // ms
+#define SIM_TIME 2000 // X50ms
+#define SIM_LOG_L 2500
 	
 volatile bool carStartRefresh_;
 
@@ -69,10 +70,11 @@ float gas_p = 0.1;
 float K_p = 0.1;
 float K_d = 5.0;
 
-float ref_traj[3][SIM_TIME];	
-float ori_traj[2][SIM_TIME];
+float ref_traj[2][SIM_TIME];	
+float ori_traj[3][SIM_TIME];
+float log_data[12][SIM_TIME]; //ref(x,y,a), actual(x,y,a), ref(v,steeling), actual(v,steeling),gaspedal, breakpedal
 
-float cur_vel;
+float cur_x, cur_y, cur_vel, cur_ori, gas_pedal_state, break_pedal_state;
 
 static void quit(int sig)
 {
@@ -84,7 +86,10 @@ static void quit(int sig)
 void odomCallback(const nav_msgs::Odometry::ConstPtr& msg)
 {
 
-   cur_vel = sqrtf(msg->twist.twist.linear.x*msg->twist.twist.linear.x+msg->twist.twist.linear.y*msg->twist.twist.linear.y);	
+   cur_vel = sqrtf(msg->twist.twist.linear.x*msg->twist.twist.linear.x+msg->twist.twist.linear.y*msg->twist.twist.linear.y);
+   cur_ori = tf::getYaw(msg->pose.pose.orientation);
+   cur_x = msg->pose.pose.position.x;
+   cur_y = msg->pose.pose.position.y;			
 
 /*
    std_msgs::Float64 gasPedal, handWheel, breakPedal;
@@ -148,6 +153,18 @@ void odomCallback(const nav_msgs::Odometry::ConstPtr& msg)
 */
 }
 
+void gasPedalCallback(const std_msgs::Float64::ConstPtr& msg)
+{
+	
+	gas_pedal_state = msg->data;
+}
+
+void breakPedalCallback(const std_msgs::Float64::ConstPtr& msg)
+{
+	
+	break_pedal_state = msg->data;
+}
+
 void wheelCallback(const std_msgs::Float64::ConstPtr& msg)
 {
 
@@ -158,35 +175,82 @@ void wheelCallback(const std_msgs::Float64::ConstPtr& msg)
         float vel_error;
 	float k_d = 5.0, k_p = 0.1;
 	if (carStart){
+
 		if (count==0){
 
-			gasPedal.data = 50*ori_traj[0][count];
+			gasPedal.data = 20*ref_traj[0][count];
 			breakPedal.data = 0;
 			direction.data = 1;
+
+			log_data[0][count] = ori_traj[0][count];
+			log_data[1][count] = ori_traj[1][count];
+			log_data[2][count] = ori_traj[2][count];
+			log_data[3][count] = cur_x;
+			log_data[4][count] = cur_y;
+			log_data[5][count] = cur_ori;
+			log_data[6][count] = ref_traj[0][count];
+			log_data[7][count] = ref_traj[1][count];
+			log_data[8][count] = cur_vel;
+			log_data[9][count] = cur_wheel;
+			log_data[10][count] = gas_pedal_state;
+			log_data[11][count] = break_pedal_state;
+
+
 			count++;
 		}
 		else{
-			vel_error = ori_traj[0][count] - cur_vel;
+			vel_error = ref_traj[0][count] - cur_vel;
 			if (vel_error>0){
-				gasPedal.data = 0.3*vel_error;
+				gasPedal.data = 5.0*vel_error-0.5*gas_pedal_state;
 				breakPedal.data = 0;	
 			}
 			else{
-				breakPedal.data = 0.3*vel_error;
+				breakPedal.data = 10.0*vel_error;
 				gasPedal.data = 0;	
 			}
 
-			handWheel.data = (ori_traj[1][count] - cur_wheel);
+			handWheel.data = 3.0*ref_traj[1][count] - 2.0*(cur_ori - ori_traj[2][count]);
+
+			log_data[0][count] = ori_traj[0][count];
+			log_data[1][count] = ori_traj[1][count];
+			log_data[2][count] = ori_traj[2][count];
+			log_data[3][count] = cur_x;
+			log_data[4][count] = cur_y;
+			log_data[5][count] = cur_ori;
+			log_data[6][count] = ref_traj[0][count];
+			log_data[7][count] = ref_traj[1][count];
+			log_data[8][count] = cur_vel;
+			log_data[9][count] = cur_wheel;
+			log_data[10][count] = gas_pedal_state;
+			log_data[11][count] = break_pedal_state;
+
 			count++;
 			if (count>SIM_TIME-1)
 				count = SIM_TIME-1;
 		
 		}
-		ROS_INFO( "desired vel is %g, and actual vel is %g", ori_traj[0][count], cur_vel);
-		ROS_INFO( "desired wheel is %g, and actual wheel is %g", ori_traj[1][count], cur_wheel);
+		//ROS_INFO( "gaspedal command is %g, handWheel command is %g, and breakpedal command is %g", gasPedal.data, handWheel.data, breakPedal.data);
+		//ROS_INFO( "cycle number %d, desired vel is %g, and actual vel is %g", count, ref_traj[0][count], cur_vel);
+		//ROS_INFO( "ref and acutal wheel are %g %g, ref and actual orientation are %g %g", ref_traj[1][count], cur_wheel, ori_traj[2][count], cur_ori);
 		car_gasPedal_pub_.publish(gasPedal); 
 		car_handWheel_pub_.publish(handWheel); 
 		car_breakPedal_pub_.publish(breakPedal);	
+	}
+	else if (carStop && count > 1000){
+		FILE *my_stream;
+
+		//save data
+		my_stream=fopen("/home/weiweihuang/Matlab/Car_Traj/car_log.txt", "w");
+		if (my_stream==NULL){
+			printf("Cannot open the file");
+			fclose(my_stream);
+			exit(1);
+		}
+		for (int i=0; i<SIM_TIME;i++){
+			fprintf(my_stream,"%.5f %.5f %.5f %.5f %.5f %.5f %.5f %.5f %.5f %.5f %.5f %.5f\n", log_data[0][i],log_data[1][i],log_data[2][i],log_data[3][i],log_data[4][i],log_data[5][i],log_data[6][i],log_data[7][i],log_data[8][i],log_data[9][i],log_data[10][i],log_data[11][i]);
+		}
+		fclose(my_stream);
+
 	}
 
 }
@@ -259,6 +323,8 @@ int main(int argc, char **argv)
 
     ros::Subscriber sub_odom_ = nh.subscribe<nav_msgs::Odometry>("/car_truth_odom", 100, &odomCallback);
     ros::Subscriber sub_wheel_ = nh.subscribe<std_msgs::Float64>("/drc_vehicle/hand_wheel/state", 100, &wheelCallback);
+    ros::Subscriber sub_gas_pedal_ = nh.subscribe<std_msgs::Float64>("/drc_vehicle/gas_pedal/state", 100, &gasPedalCallback);
+    ros::Subscriber sub_break_pedal_ = nh.subscribe<std_msgs::Float64>("/drc_vehicle/break_pedal/state", 100, &breakPedalCallback);		
 
 
     car_handBrake_pub_ = nh.advertise<std_msgs::Float64>("/drc_vehicle/hand_brake/cmd", 100);	
@@ -270,14 +336,26 @@ int main(int argc, char **argv)
     // initial trajectory
    
    for (int i=0; i< SIM_TIME; i++){
-	ori_traj[0][i] = 0.01*(i+1);
-	ori_traj[1][i] = 0.0;
-	ori_traj[2][i] = 0.0;	
+	if(i<1000){
+		ori_traj[0][i] = 0.02*(i+1);
+		ori_traj[1][i] = 0.0;
+		ori_traj[2][i] = 0.0;	
+	}
+	else if(i<1500){
+		ori_traj[0][i] = 20-0.05 - 4.0*sinf(-(float)(i-1000)/500.0*3.14159/2.0);
+		ori_traj[1][i] = 4.0*cosf(-(float)(i-1000)/500.0*3.14159/2.0) - 4.0;
+		ori_traj[2][i] = -(float)(i-1000)/500.0*3.14159/2.0;
+	}
+	else{
+		ori_traj[0][i] = 24.0;
+		ori_traj[1][i] = -4.0 - 0.02*(i-1500);
+		ori_traj[2][i] = -3.14159/2; 
+	}
    }
 
    for (int i=0; i< SIM_TIME-1; i++){
-	ref_traj[0][i] = 50*sqrtf((ori_traj[0][i+1]-ori_traj[0][i])*(ori_traj[0][i+1]-ori_traj[0][i])+(ori_traj[1][i+1]-ori_traj[1][i])*(ori_traj[1][i+1]-ori_traj[1][i]));
-	ref_traj[1][i] = atan2f(ref_traj[0][i], 1.88*50*(ori_traj[2][i+1]-ori_traj[2][i]));
+	ref_traj[0][i] = 20*sqrtf((ori_traj[0][i+1]-ori_traj[0][i])*(ori_traj[0][i+1]-ori_traj[0][i])+(ori_traj[1][i+1]-ori_traj[1][i])*(ori_traj[1][i+1]-ori_traj[1][i]));
+	ref_traj[1][i] = atan2f(1.88*20*(ori_traj[2][i+1]-ori_traj[2][i]), ref_traj[0][i]);
    }
     
     ref_traj[0][SIM_TIME-1] = 0;

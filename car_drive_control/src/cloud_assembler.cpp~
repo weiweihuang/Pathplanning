@@ -73,7 +73,7 @@ namespace cloud_assembler
   {
     ros::NodeHandle private_nh("~");
 
-    private_nh.param("buffer_length", buffer_length_, 400);
+    private_nh.param("buffer_length", buffer_length_, 800);
 
     output_pub_ = node_.advertise<sensor_msgs::PointCloud2> ("/assembled_cloud", 100);
 
@@ -130,7 +130,7 @@ namespace cloud_assembler
     scan2.range_min = 0.1f; 
     scan2.range_max = 10.0f;  
     try{
-      tf_.waitForTransform("/start_frame", scan->header.frame_id,ros::Time::now(), ros::Duration(1.0));	
+      //tf_.waitForTransform("/start_frame", scan->header.frame_id,ros::Time::now(), ros::Duration(1.0));	
       projector_.transformLaserScanToPointCloud("/start_frame", scan2, cloud, tf_);
 
     }
