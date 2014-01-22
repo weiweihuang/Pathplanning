@@ -280,6 +280,19 @@ foot_interface_all/fast:
 .PHONY : foot_interface_all/fast
 
 #=============================================================================
+# Target rules for targets named foot_interface_nochange
+
+# Build rule for target.
+foot_interface_nochange: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 foot_interface_nochange
+.PHONY : foot_interface_nochange
+
+# fast build rule for target.
+foot_interface_nochange/fast:
+	$(MAKE) -f CMakeFiles/foot_interface_nochange.dir/build.make CMakeFiles/foot_interface_nochange.dir/build
+.PHONY : foot_interface_nochange/fast
+
+#=============================================================================
 # Target rules for targets named foot_interface_ocu
 
 # Build rule for target.
@@ -423,6 +436,19 @@ step_plan_ocu/fast:
 .PHONY : step_plan_ocu/fast
 
 #=============================================================================
+# Target rules for targets named step_plan_predesigned_map
+
+# Build rule for target.
+step_plan_predesigned_map: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 step_plan_predesigned_map
+.PHONY : step_plan_predesigned_map
+
+# fast build rule for target.
+step_plan_predesigned_map/fast:
+	$(MAKE) -f CMakeFiles/step_plan_predesigned_map.dir/build.make CMakeFiles/step_plan_predesigned_map.dir/build
+.PHONY : step_plan_predesigned_map/fast
+
+#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -520,6 +546,7 @@ src/astar.o: src/astar.cpp.o
 src/astar.cpp.o:
 	$(MAKE) -f CMakeFiles/step_plan_all.dir/build.make CMakeFiles/step_plan_all.dir/src/astar.cpp.o
 	$(MAKE) -f CMakeFiles/step_plan_ocu.dir/build.make CMakeFiles/step_plan_ocu.dir/src/astar.cpp.o
+	$(MAKE) -f CMakeFiles/step_plan_predesigned_map.dir/build.make CMakeFiles/step_plan_predesigned_map.dir/src/astar.cpp.o
 .PHONY : src/astar.cpp.o
 
 src/astar.i: src/astar.cpp.i
@@ -529,6 +556,7 @@ src/astar.i: src/astar.cpp.i
 src/astar.cpp.i:
 	$(MAKE) -f CMakeFiles/step_plan_all.dir/build.make CMakeFiles/step_plan_all.dir/src/astar.cpp.i
 	$(MAKE) -f CMakeFiles/step_plan_ocu.dir/build.make CMakeFiles/step_plan_ocu.dir/src/astar.cpp.i
+	$(MAKE) -f CMakeFiles/step_plan_predesigned_map.dir/build.make CMakeFiles/step_plan_predesigned_map.dir/src/astar.cpp.i
 .PHONY : src/astar.cpp.i
 
 src/astar.s: src/astar.cpp.s
@@ -538,6 +566,7 @@ src/astar.s: src/astar.cpp.s
 src/astar.cpp.s:
 	$(MAKE) -f CMakeFiles/step_plan_all.dir/build.make CMakeFiles/step_plan_all.dir/src/astar.cpp.s
 	$(MAKE) -f CMakeFiles/step_plan_ocu.dir/build.make CMakeFiles/step_plan_ocu.dir/src/astar.cpp.s
+	$(MAKE) -f CMakeFiles/step_plan_predesigned_map.dir/build.make CMakeFiles/step_plan_predesigned_map.dir/src/astar.cpp.s
 .PHONY : src/astar.cpp.s
 
 src/cloud_assembler.o: src/cloud_assembler.cpp.o
@@ -612,6 +641,30 @@ src/foot_interface_all.cpp.s:
 	$(MAKE) -f CMakeFiles/foot_interface_all.dir/build.make CMakeFiles/foot_interface_all.dir/src/foot_interface_all.cpp.s
 .PHONY : src/foot_interface_all.cpp.s
 
+src/foot_interface_nochange.o: src/foot_interface_nochange.cpp.o
+.PHONY : src/foot_interface_nochange.o
+
+# target to build an object file
+src/foot_interface_nochange.cpp.o:
+	$(MAKE) -f CMakeFiles/foot_interface_nochange.dir/build.make CMakeFiles/foot_interface_nochange.dir/src/foot_interface_nochange.cpp.o
+.PHONY : src/foot_interface_nochange.cpp.o
+
+src/foot_interface_nochange.i: src/foot_interface_nochange.cpp.i
+.PHONY : src/foot_interface_nochange.i
+
+# target to preprocess a source file
+src/foot_interface_nochange.cpp.i:
+	$(MAKE) -f CMakeFiles/foot_interface_nochange.dir/build.make CMakeFiles/foot_interface_nochange.dir/src/foot_interface_nochange.cpp.i
+.PHONY : src/foot_interface_nochange.cpp.i
+
+src/foot_interface_nochange.s: src/foot_interface_nochange.cpp.s
+.PHONY : src/foot_interface_nochange.s
+
+# target to generate assembly for a file
+src/foot_interface_nochange.cpp.s:
+	$(MAKE) -f CMakeFiles/foot_interface_nochange.dir/build.make CMakeFiles/foot_interface_nochange.dir/src/foot_interface_nochange.cpp.s
+.PHONY : src/foot_interface_nochange.cpp.s
+
 src/foot_interface_ocu.o: src/foot_interface_ocu.cpp.o
 .PHONY : src/foot_interface_ocu.o
 
@@ -684,6 +737,30 @@ src/map_plan_ocu.cpp.s:
 	$(MAKE) -f CMakeFiles/step_plan_ocu.dir/build.make CMakeFiles/step_plan_ocu.dir/src/map_plan_ocu.cpp.s
 .PHONY : src/map_plan_ocu.cpp.s
 
+src/map_plan_predesigned_map.o: src/map_plan_predesigned_map.cpp.o
+.PHONY : src/map_plan_predesigned_map.o
+
+# target to build an object file
+src/map_plan_predesigned_map.cpp.o:
+	$(MAKE) -f CMakeFiles/step_plan_predesigned_map.dir/build.make CMakeFiles/step_plan_predesigned_map.dir/src/map_plan_predesigned_map.cpp.o
+.PHONY : src/map_plan_predesigned_map.cpp.o
+
+src/map_plan_predesigned_map.i: src/map_plan_predesigned_map.cpp.i
+.PHONY : src/map_plan_predesigned_map.i
+
+# target to preprocess a source file
+src/map_plan_predesigned_map.cpp.i:
+	$(MAKE) -f CMakeFiles/step_plan_predesigned_map.dir/build.make CMakeFiles/step_plan_predesigned_map.dir/src/map_plan_predesigned_map.cpp.i
+.PHONY : src/map_plan_predesigned_map.cpp.i
+
+src/map_plan_predesigned_map.s: src/map_plan_predesigned_map.cpp.s
+.PHONY : src/map_plan_predesigned_map.s
+
+# target to generate assembly for a file
+src/map_plan_predesigned_map.cpp.s:
+	$(MAKE) -f CMakeFiles/step_plan_predesigned_map.dir/build.make CMakeFiles/step_plan_predesigned_map.dir/src/map_plan_predesigned_map.cpp.s
+.PHONY : src/map_plan_predesigned_map.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -702,6 +779,7 @@ help:
 	@echo "... doxygen"
 	@echo "... edit_cache"
 	@echo "... foot_interface_all"
+	@echo "... foot_interface_nochange"
 	@echo "... foot_interface_ocu"
 	@echo "... install"
 	@echo "... install/local"
@@ -718,6 +796,7 @@ help:
 	@echo "... run_tests"
 	@echo "... step_plan_all"
 	@echo "... step_plan_ocu"
+	@echo "... step_plan_predesigned_map"
 	@echo "... test"
 	@echo "... test-future"
 	@echo "... test-results"
@@ -737,6 +816,9 @@ help:
 	@echo "... src/foot_interface_all.o"
 	@echo "... src/foot_interface_all.i"
 	@echo "... src/foot_interface_all.s"
+	@echo "... src/foot_interface_nochange.o"
+	@echo "... src/foot_interface_nochange.i"
+	@echo "... src/foot_interface_nochange.s"
 	@echo "... src/foot_interface_ocu.o"
 	@echo "... src/foot_interface_ocu.i"
 	@echo "... src/foot_interface_ocu.s"
@@ -746,6 +828,9 @@ help:
 	@echo "... src/map_plan_ocu.o"
 	@echo "... src/map_plan_ocu.i"
 	@echo "... src/map_plan_ocu.s"
+	@echo "... src/map_plan_predesigned_map.o"
+	@echo "... src/map_plan_predesigned_map.i"
+	@echo "... src/map_plan_predesigned_map.s"
 .PHONY : help
 
 

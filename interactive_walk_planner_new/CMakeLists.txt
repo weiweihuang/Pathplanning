@@ -47,11 +47,15 @@ rosbuild_add_executable(foot_interface_all src/foot_interface_all.cpp)
 rosbuild_link_boost(foot_interface_all thread)
 rosbuild_add_executable(foot_interface_ocu src/foot_interface_ocu.cpp)
 rosbuild_link_boost(foot_interface_ocu thread)
+rosbuild_add_executable(foot_interface_nochange src/foot_interface_nochange.cpp)
+rosbuild_link_boost(foot_interface_nochange thread)
 
 rosbuild_add_executable(step_plan_all src/map_plan_all.cpp src/astar.cpp)
 rosbuild_link_boost(step_plan_all thread)
 rosbuild_add_executable(step_plan_ocu src/map_plan_ocu.cpp src/astar.cpp)
 rosbuild_link_boost(step_plan_ocu thread)
+rosbuild_add_executable(step_plan_predesigned_map src/map_plan_predesigned_map.cpp src/astar.cpp)
+rosbuild_link_boost(step_plan_predesigned_map thread)
 
 
 
@@ -59,5 +63,6 @@ target_link_libraries(cloud_assembler libvtkCommon.so libvtkFiltering.so libvtkR
 target_link_libraries(cloud_assembler_ocu libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})
 target_link_libraries(step_plan_all libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})
 target_link_libraries(step_plan_ocu libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})
+target_link_libraries(step_plan_predesigned_map libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})
 
 

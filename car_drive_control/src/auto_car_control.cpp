@@ -242,12 +242,12 @@ void wheelCallback(const std_msgs::Float64::ConstPtr& msg)
 			vel_error = ref_traj[0][count] - cur_vel + 0.25*(ref_car_x - car_x);
 
 			if (vel_error>0){
-				gasPedal.data = 5.0*vel_error-0.5*gas_pedal_state;
+				gasPedal.data = 2.5*vel_error-0.5*gas_pedal_state;
 				breakPedal.data = 0.0;
 			}
 			else{
 				gasPedal.data = 0;
-				breakPedal.data = -10.0*vel_error;
+				breakPedal.data = -5.0*vel_error;
 			}
 
 
@@ -419,36 +419,36 @@ int main(int argc, char **argv)
 
     // initial trajectory
     float Degg = 3.14159/3.0f;
-    float RR = 2.0f/sinf(Degg);	
+    float RR = 1.8f/sinf(Degg);	
    
    for (int i=0; i< SIM_TIME; i++){
-	if(i<400){
-		ori_traj[0][i] = 0.02*(i+1);
+	if(i<500){
+		ori_traj[0][i] = 0.036*(i+1);
 		ori_traj[1][i] = 0.0;
 		ori_traj[2][i] = 0.0;
 		//if (i>350)
 			//ori_traj[2][i] = (float)(i-350)*6.0/(50*3.14159);		
 	}
+
 	else if(i<600){
-		ori_traj[0][i] = 8.0+2.0+RR*sinf(2.0*Degg*(i-400)/200.0f-Degg);
-		ori_traj[1][i] = 1.5*(RR*cosf(2.0*Degg*(i-400)/200.0f-Degg)-1.0f/sinf(Degg));
+		ori_traj[0][i] = 18.0+1.80+RR*sinf(1.8*Degg*(i-500)/100.0f-Degg);
+		ori_traj[1][i] = 1.5*(RR*cosf(1.8*Degg*(i-500)/100.0f-Degg)-1.0f/sinf(Degg));
 		ori_traj[2][i] = 0.0;//-((3.14159-2.0f*Degg)*(i-400)/200.0f+Degg-3.14159/2.0f);	
 	}
 	else if(i<1000){
-		ori_traj[0][i] = 12.0 + 0.0275*(i+1-600);
+		ori_traj[0][i] = 21.6 + 0.036*(i+1-600);
 		ori_traj[1][i] = 0.0;
 		ori_traj[2][i] = 0.0;	
-		//if (i<950)
-			//ori_traj[2][i] = (float)(i-950)*6.0/(50*3.14159);
 	}
+
 	else if(i<1500){
-		ori_traj[0][i] = 20-0.05 - 4.0*sinf(-(float)(i-1000)/500.0*3.14159/2.0)+3;
-		ori_traj[1][i] = 4.0*cosf(-(float)(i-1000)/500.0*3.14159/2.0) - 4.0;
+		ori_traj[0][i] = 36 - 9.0*sinf(-(float)(i-1000)/500.0*3.14159/2.0);
+		ori_traj[1][i] = 9.0*cosf(-(float)(i-1000)/500.0*3.14159/2.0) - 9.0;
 		ori_traj[2][i] = -(float)(i-1000)/500.0*3.14159/2.0;
 	}
 	else{
-		ori_traj[0][i] = 24.0+3;
-		ori_traj[1][i] = -4.0 - 0.02*(i-1500);
+		ori_traj[0][i] = 45.0;
+		ori_traj[1][i] = -9.0 - 0.036*(i-1500);
 		ori_traj[2][i] = -3.14159/2; 
 	}
    }

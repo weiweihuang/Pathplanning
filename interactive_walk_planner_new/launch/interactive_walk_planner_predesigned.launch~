@@ -1,0 +1,14 @@
+<launch>  
+
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(interactive_walk_planner_new)/rviz_cfg/default_walk_plan.rviz" output="screen">
+    </node>      
+
+  <node pkg="interactive_walk_planner_new" type="foot_interface_nochange" name="foot_interface_nochange" output="screen">
+    </node>
+
+  <node pkg="interactive_walk_planner_new" type="step_plan_predesigned_map" name="step_plan_predesigned_map" output="screen">
+  <param name="action_path" value="$(find interactive_walk_planner_new)/action_sets/" />
+    </node>
+
+
+</launch>

@@ -403,13 +403,48 @@ clean: CMakeFiles/foot_interface_all.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/foot_interface_nochange.dir
+
+# All Build rule for target.
+CMakeFiles/foot_interface_nochange.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/foot_interface_nochange.dir/build.make CMakeFiles/foot_interface_nochange.dir/depend
+	$(MAKE) -f CMakeFiles/foot_interface_nochange.dir/build.make CMakeFiles/foot_interface_nochange.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles  21
+	@echo "Built target foot_interface_nochange"
+.PHONY : CMakeFiles/foot_interface_nochange.dir/all
+
+# Include target in all.
+all: CMakeFiles/foot_interface_nochange.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/foot_interface_nochange.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles 17
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/foot_interface_nochange.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles 0
+.PHONY : CMakeFiles/foot_interface_nochange.dir/rule
+
+# Convenience name for target.
+foot_interface_nochange: CMakeFiles/foot_interface_nochange.dir/rule
+.PHONY : foot_interface_nochange
+
+# clean rule for target.
+CMakeFiles/foot_interface_nochange.dir/clean:
+	$(MAKE) -f CMakeFiles/foot_interface_nochange.dir/build.make CMakeFiles/foot_interface_nochange.dir/clean
+.PHONY : CMakeFiles/foot_interface_nochange.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/foot_interface_nochange.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/foot_interface_ocu.dir
 
 # All Build rule for target.
 CMakeFiles/foot_interface_ocu.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/foot_interface_ocu.dir/build.make CMakeFiles/foot_interface_ocu.dir/depend
 	$(MAKE) -f CMakeFiles/foot_interface_ocu.dir/build.make CMakeFiles/foot_interface_ocu.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles  21
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles  22
 	@echo "Built target foot_interface_ocu"
 .PHONY : CMakeFiles/foot_interface_ocu.dir/all
 
@@ -700,7 +735,7 @@ clean: CMakeFiles/run_tests.dir/clean
 CMakeFiles/step_plan_all.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/step_plan_all.dir/build.make CMakeFiles/step_plan_all.dir/depend
 	$(MAKE) -f CMakeFiles/step_plan_all.dir/build.make CMakeFiles/step_plan_all.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles  24 25
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles  25 26
 	@echo "Built target step_plan_all"
 .PHONY : CMakeFiles/step_plan_all.dir/all
 
@@ -735,7 +770,7 @@ clean: CMakeFiles/step_plan_all.dir/clean
 CMakeFiles/step_plan_ocu.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/step_plan_ocu.dir/build.make CMakeFiles/step_plan_ocu.dir/depend
 	$(MAKE) -f CMakeFiles/step_plan_ocu.dir/build.make CMakeFiles/step_plan_ocu.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles  26 27
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles  27 28
 	@echo "Built target step_plan_ocu"
 .PHONY : CMakeFiles/step_plan_ocu.dir/all
 
@@ -761,6 +796,41 @@ CMakeFiles/step_plan_ocu.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/step_plan_ocu.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/step_plan_predesigned_map.dir
+
+# All Build rule for target.
+CMakeFiles/step_plan_predesigned_map.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/step_plan_predesigned_map.dir/build.make CMakeFiles/step_plan_predesigned_map.dir/depend
+	$(MAKE) -f CMakeFiles/step_plan_predesigned_map.dir/build.make CMakeFiles/step_plan_predesigned_map.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles  29 30
+	@echo "Built target step_plan_predesigned_map"
+.PHONY : CMakeFiles/step_plan_predesigned_map.dir/all
+
+# Include target in all.
+all: CMakeFiles/step_plan_predesigned_map.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/step_plan_predesigned_map.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles 18
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/step_plan_predesigned_map.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles 0
+.PHONY : CMakeFiles/step_plan_predesigned_map.dir/rule
+
+# Convenience name for target.
+step_plan_predesigned_map: CMakeFiles/step_plan_predesigned_map.dir/rule
+.PHONY : step_plan_predesigned_map
+
+# clean rule for target.
+CMakeFiles/step_plan_predesigned_map.dir/clean:
+	$(MAKE) -f CMakeFiles/step_plan_predesigned_map.dir/build.make CMakeFiles/step_plan_predesigned_map.dir/clean
+.PHONY : CMakeFiles/step_plan_predesigned_map.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/step_plan_predesigned_map.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -941,7 +1011,7 @@ gtest/preinstall:
 gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles  22
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles  23
 	@echo "Built target gtest"
 .PHONY : gtest/CMakeFiles/gtest.dir/all
 
@@ -972,7 +1042,7 @@ clean: gtest/CMakeFiles/gtest.dir/clean
 gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles  23
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles  24
 	@echo "Built target gtest_main"
 .PHONY : gtest/CMakeFiles/gtest_main.dir/all
 

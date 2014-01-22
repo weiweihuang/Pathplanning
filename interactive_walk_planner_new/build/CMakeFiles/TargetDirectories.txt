@@ -9,6 +9,7 @@
 /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/cloud_assembler_ocu.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/doxygen.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/foot_interface_all.dir
+/home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/foot_interface_nochange.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/foot_interface_ocu.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/gtest/CMakeFiles/gtest.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/gtest/CMakeFiles/gtest_main.dir
@@ -22,6 +23,7 @@
 /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/run_tests.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/step_plan_all.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/step_plan_ocu.dir
+/home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/step_plan_predesigned_map.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/test.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/test-future.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/interactive_walk_planner_new/build/CMakeFiles/test-results.dir
