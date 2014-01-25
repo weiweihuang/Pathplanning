@@ -531,7 +531,7 @@ float heuristic( ASTAR *aa, ASTAR_NODE *an )
   if ( an->com[YY] > aa->tt->max[YY] )
     return BIG_VALUE;
 
-  float heuristic = xya_distance( aa, an->com, aa->tt->goal );
+  float heuristic = xya_distance( aa, an->state, aa->tt->goal );
 
   // use simple distance to goal as heuristic function
   return heuristic;
@@ -542,6 +542,7 @@ float heuristic( ASTAR *aa, ASTAR_NODE *an )
 float astar_step_cost( ASTAR *aa, ASTAR_NODE *an_child, ASTAR_NODE *an )
 {
 
+/*
   // new version
   int index, action_index, pre_index;
   float step_height, current_height, perent_height;
@@ -591,6 +592,95 @@ float astar_step_cost( ASTAR *aa, ASTAR_NODE *an_child, ASTAR_NODE *an )
         return BIG_COST;
   else
           return step_cost;
+
+*/
+
+  // old version
+
+     float n_s_w, d_s_l, offset, A, B, C, D;
+     float p_s_o[2], c_s_o[2], f_s_o[2], p_s[2], c_s[2], f_s[2];
+     float c_a, f_a; // current orientation and future orientation
+     float x, y, l, s_w, ori_shift, p_s_l;
+     float E_m, E_s_a, E_s, E_r;
+     float swing_cost;
+     float step_height;	
+
+     n_s_w = HIP_WIDTH*STEP_WIDTH_FACTOR;
+     d_s_l = STEP_LENGTH*STEP_LENGTH_FACTOR;
+     offset = 1.0;
+     A = (1+offset)/(4*d_s_l*d_s_l*d_s_l);
+     B = 3*A*d_s_l*d_s_l*d_s_l*d_s_l;
+     C = 0.1;
+     D = n_s_w/1.5;
+
+
+     step_height = an_child->state[ZZ] - an->state[ZZ];
+
+     if (an == NULL)
+     {
+     fprintf( stderr, "Parent cannot be NULL \n" );
+     exit( -1 );	
+     }
+     else
+     {
+     c_s_o[XX] = an->state[XX];
+     c_s_o[YY] = an->state[YY];
+     if (an->parent == NULL)
+     {
+     p_s_o[XX] = an->state[XX]-HIP_WIDTH;
+     p_s_o[YY] = an->state[YY];
+     }
+     else
+     {
+     p_s_o[XX] = an->parent->state[XX];
+     p_s_o[YY] = an->parent->state[YY];
+     }
+     }
+
+     f_s_o[XX] = an_child->state[XX];
+     f_s_o[YY] = an_child->state[YY];
+
+     c_a = an->state[ANGLE]-M_PI/2;
+
+     p_s[XX] = p_s_o[XX]*cosf(c_a)-p_s_o[YY]*sinf(c_a);
+     p_s[YY] = p_s_o[XX]*sinf(c_a)+p_s_o[YY]*cosf(c_a);
+     c_s[XX] = c_s_o[XX]*cosf(c_a)-c_s_o[YY]*sinf(c_a);
+     c_s[YY] = c_s_o[XX]*sinf(c_a)+c_s_o[YY]*cosf(c_a);
+     f_s[XX] = f_s_o[XX]*cosf(c_a)-f_s_o[YY]*sinf(c_a);
+     f_s[YY] = f_s_o[XX]*sinf(c_a)+f_s_o[YY]*cosf(c_a);
+
+     ori_shift = an->state[ANGLE] - an_child->state[ANGLE];
+     x = f_s[XX] - p_s[XX];
+     y = f_s[YY] - p_s[YY];
+     p_s_l = fabsf(y);//sqrtf((c_s[YY] - p_s[YY])*(c_s[YY] - p_s[YY]));
+
+     if (p_s_l<0.1)
+     l = 0.1;
+     else 
+     l = p_s_l;//sqrtf(x*x+y*y)/2*sqrtf(d_s_l/p_s_l);
+
+     if (l>0.26 && fabsf(step_height)>0.05)
+	return BIG_COST;
+
+     if (an->state[SIDE]==LEFT)
+     s_w = (f_s[XX] - c_s[XX]);
+     else
+     s_w = -(f_s[XX] - c_s[XX]);
+
+     E_m = 1.0*(A*(1.0+20.0*fabsf(step_height))*l*l*l+B/l-offset);
+
+     E_s_a = 0;
+     if (s_w<0)
+  E_s_a = powf((n_s_w-s_w)/n_s_w,0.2)*D*(n_s_w-s_w);
+     else if (s_w<n_s_w)
+       E_s_a = D*(n_s_w-s_w);
+
+     E_s = 60.0*(C*s_w*s_w + E_s_a);
+     E_r = 0.4*ori_shift*ori_shift/l;
+     
+       return ((E_m + E_s + E_r)/9.0);
+
+
 
 }
 
@@ -707,7 +797,7 @@ void Get_terrain_cost( ASTAR *aa, ASTAR_NODE *an, float x, float y, float angle_
 
   if (step_height ==-1)
         step_height = 0;
-
+/*
   //publish step down when goal is high
   if (step_height - an->state[ZZ]<-0.10 && task_mode == 2){
         terrain_feedback[0] = BIG_COST;
@@ -721,7 +811,7 @@ void Get_terrain_cost( ASTAR *aa, ASTAR_NODE *an, float x, float y, float angle_
         terrain_feedback[1] = step_height;
             return;
   }
-
+*/
 
   //maximun height change
   diff_height = fabsf(step_height - an->state[ZZ]);
@@ -757,7 +847,7 @@ void Get_terrain_cost( ASTAR *aa, ASTAR_NODE *an, float x, float y, float angle_
     }
   }
 
-  if ((float)(above_support_count)/(float)(total_count) > 0.1 || (float)(bellow_support_count)/(float)(total_count) > 0.25){
+  if ((float)(above_support_count)/(float)(total_count) > 0.05 || (float)(bellow_support_count)/(float)(total_count) > 0.1){
         terrain_feedback[0] = BIG_COST;
         terrain_feedback[1] = step_height;
             return;
@@ -862,6 +952,7 @@ if (rough_cost > 100){
 */
 
   // for swing cost
+/*
   if (task_mode == 1){
          float swing_distance = 0;
          float swing_xx, swing_yy;
@@ -910,6 +1001,7 @@ if (rough_cost > 100){
                  return;
          }
   }
+*/
   // for over lay cost
 /*
 float dis_two_feet = sqrt((x-an->state[XX])*(x-an->state[XX]) + (y-an->state[YY])*(y-an->state[YY]));
@@ -1180,7 +1272,7 @@ void next_target_location(ASTAR *aa, ASTAR_NODE *an, ASTAR_NODE *an_child, float
   float ix, iy;
   float c_a, c_s[2];
   float terrain_feedback[2];
-  float foot_pitch, final_foot_pitch;
+  float foot_pitch=0, final_foot_pitch;
 
   // figure out the distance to goal
   c = aa->tt->goal[XX] - an->com[XX];
@@ -1215,7 +1307,7 @@ void next_target_location(ASTAR *aa, ASTAR_NODE *an, ASTAR_NODE *an_child, float
   final_foot_pitch = foot_pitch;
   temp = best_value;
 
-
+/*
   if(best_value>1000){
     for(x_off=-1;x_off<2;x_off++){
       for(y_off=-1;y_off<2;y_off++){
@@ -1255,7 +1347,7 @@ void next_target_location(ASTAR *aa, ASTAR_NODE *an, ASTAR_NODE *an_child, float
     rotation = ori_shift;
 
   }        
-
+*/
 
   an_child->state[XX] = target_x;
   an_child->state[YY] = target_y;

@@ -48,8 +48,8 @@ astar.h: demo astar
 // SHOULD BE VARIABLES
 #define INFLATION 5.0f // heuristic inflation factor // 8.0 good
 #define STEP_COST_WEIGHT 2.0f // scale factor on cost map
-#define STEP_LENGTH 0.30f // meters
-#define HIP_WIDTH 0.26f // meters
+#define STEP_LENGTH 0.35f // meters
+#define HIP_WIDTH 0.22f // meters
 #define CLOSE_ENOUGH ((float)STEP_LENGTH/2.0f) // close enough to goal to quit?
 #define DUPLICATE_DISTANCE_THRESHOLD 0.1f // duplicate detection threshold
 #define CUTOFF_INCREMENT 3*STEP_LENGTH // cutoff if priority too high

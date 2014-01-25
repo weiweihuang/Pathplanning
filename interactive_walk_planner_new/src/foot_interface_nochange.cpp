@@ -692,8 +692,8 @@ void makeMovingMarker_Goal()
 {
 
   geometry_msgs::Pose position;
-      position.position.x = 0.3;
-      position.position.y = 0;
+      position.position.x = 2.5;
+      position.position.y = -0.13;
       position.position.z = 0.2;
       position.orientation.x = 0;
       position.orientation.y = 0;
@@ -733,7 +733,7 @@ void makeMovingMarker( geometry_msgs::Pose position, std::string markerName, boo
   int_marker.header.frame_id = "/l_foot";
   int_marker.scale = 0.3;
   int_marker.name = markerName;
-  int_marker.description = markerName;
+  //int_marker.description = markerName;
   int_marker.pose = position;
 
   InteractiveMarkerControl control;
@@ -764,7 +764,7 @@ void makeMenuMarker( const tf::Vector3& position )
   int_marker.scale = 1;
 
   int_marker.name = "Command Menu";
-  int_marker.description = "Command Menu\n(Right Click)";
+  //int_marker.description = "Command Menu\n(Right Click)";
 
   InteractiveMarkerControl control;
 
@@ -927,12 +927,12 @@ int main(int argc, char** argv)
  
   makeMovingMarker_Goal();
   tf::Vector3 p;
-  p = tf::Vector3(0, -1, 0);
+  p = tf::Vector3(-0.5, -1.5, 0);
   makeMenuMarker(p);
   
 
       geometry_msgs::Pose position;
-      position.position.x = 0+0.045;
+      position.position.x = -0.5;
       position.position.y = 0;
       position.position.z = 0;
       position.orientation.x = 0;

@@ -480,6 +480,24 @@ void Get_Data(){
 	for (i=0;i<TERRAIN_N_X;i++)
 		for (j=0;j<TERRAIN_N_Y;j++)
 			Ob_index[i][j]=0.0;	
+
+	//=========== test step height map =====================//
+        //first bar at 0.3 with width 0.8
+	for ( i = 50; i < 93; i++ )
+		for (j=0; j<200; j++)
+			Ob_index[i][j] = 0.1;
+
+        //second bar at 1.6 with width 0.6
+	for ( i = 125; i < 153; i++ )
+		for (j=0; j<200; j++)
+			Ob_index[i][j] = 0.1;
+
+
+
+
+
+
+/*
 	  
 	// random rectangles: this is in pixel units
 	for ( i = 0; i < 10; i++ ){
@@ -537,8 +555,7 @@ void Get_Data(){
 	if ( (ix - ixc)*(ix - ixc) + (iy - iyc)*(iy - iyc) <= ixl*ixl )
 	  Ob_index[ix][iy] = 0;
 	}
-
-
+*/
         // blur the map
 	
 	for (i=0;i<TERRAIN_N_X;i++){
@@ -810,13 +827,13 @@ void mapbulidFunc()
         pthread_mutex_unlock(&terrain_mutex);
 
         // set current foot and goal location
-        t1->current[XX] = 0.045;
+        t1->current[XX] = -0.5;
         t1->current[YY] = 0.0;
         t1->current[ANGLE] = 0;
         t1->current[SIDE] = LEFT;
 
-        t1->goal[XX] = goal_pos_x;
-        t1->goal[YY] = goal_pos_y;
+        t1->goal[XX] = 2.5;//goal_pos_x;
+        t1->goal[YY] = 0.0;//goal_pos_y;
         t1->goal[ANGLE] = 0;
         t1->goal[SIDE] = LEFT;
 

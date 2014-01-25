@@ -692,8 +692,8 @@ void makeMovingMarker_Goal()
 {
 
   geometry_msgs::Pose position;
-      position.position.x = 0.3;
-      position.position.y = 0;
+      position.position.x = 2.8;
+      position.position.y = -0.13;
       position.position.z = 0.2;
       position.orientation.x = 0;
       position.orientation.y = 0;
@@ -702,19 +702,19 @@ void makeMovingMarker_Goal()
 
   InteractiveMarker int_marker;
   int_marker.header.frame_id = "/l_foot";
-  int_marker.scale = 0.2;
+  int_marker.scale = 0.1;
   int_marker.name = "goal_pos";
   int_marker.description = "goal_pos";
   int_marker.pose = position;
 
   InteractiveMarkerControl control;
 
-  control.orientation.w = 1;
+  /*control.orientation.w = 1;
   control.orientation.x = 0;
   control.orientation.y = 1;
   control.orientation.z = 0;
   control.interaction_mode = InteractiveMarkerControl::ROTATE_AXIS;
-  int_marker.controls.push_back(control);
+  int_marker.controls.push_back(control);*/
 
   control.interaction_mode = InteractiveMarkerControl::MOVE_PLANE;
   control.always_visible = true;
@@ -733,17 +733,17 @@ void makeMovingMarker( geometry_msgs::Pose position, std::string markerName, boo
   int_marker.header.frame_id = "/l_foot";
   int_marker.scale = 0.3;
   int_marker.name = markerName;
-  int_marker.description = markerName;
+  //int_marker.description = markerName;
   int_marker.pose = position;
 
   InteractiveMarkerControl control;
 
-  control.orientation.w = 1;
+  /*control.orientation.w = 1;
   control.orientation.x = 0;
   control.orientation.y = 1;
   control.orientation.z = 0;
   control.interaction_mode = InteractiveMarkerControl::ROTATE_AXIS;
-  int_marker.controls.push_back(control);
+  int_marker.controls.push_back(control);*/
 
   control.interaction_mode = InteractiveMarkerControl::MOVE_PLANE;
   //control.always_visible = true;
@@ -764,7 +764,7 @@ void makeMenuMarker( const tf::Vector3& position )
   int_marker.scale = 1;
 
   int_marker.name = "Command Menu";
-  int_marker.description = "Command Menu\n(Right Click)";
+  //int_marker.description = "Command Menu\n(Right Click)";
 
   InteractiveMarkerControl control;
 
@@ -780,22 +780,7 @@ void makeMenuMarker( const tf::Vector3& position )
   server->setCallback(int_marker.name, &processFeedback);
   menu_handler.apply( *server, int_marker.name );
 }
-// %EndTag(Menu)%
-/*
-void ori_estimationCallback(const interactive_walk_planner_new::orientation::ConstPtr& msg)
-{
 
-if (msg->header.stamp.toSec() < initTime.toSec()) {
-printf("\n\n\n\nbogus message, %g %g\n\n\n\n\n", msg->header.stamp.toSec(), initTime.toSec());
-}
-else{
-         ori_estimation = msg->ori;
-printf("orientation message received, %g\n\n\n\n\n", ori_estimation);
-
-}
-
-}
-*/
 
 void foot_sequenceCallback(const interactive_walk_planner_new::foot_sequence::ConstPtr& msg)
 {
@@ -942,12 +927,12 @@ int main(int argc, char** argv)
  
   makeMovingMarker_Goal();
   tf::Vector3 p;
-  p = tf::Vector3(0, -1, 0);
+  p = tf::Vector3(-0.5, -1.5, 0);
   makeMenuMarker(p);
   
 
       geometry_msgs::Pose position;
-      position.position.x = 0+0.045;
+      position.position.x = -0.5;
       position.position.y = 0;
       position.position.z = 0;
       position.orientation.x = 0;
