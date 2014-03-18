@@ -26,8 +26,9 @@ sudo apt-get dist-upgrade
 ```
 
 * Restart your computer. 
-====
+
 * groovy install
+====
 
 ```
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu precise main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -67,8 +68,9 @@ sudo apt-get install -y cmake debhelper ros-groovy-pr2-mechanism ros-groovy-std-
 ```
 sudo apt-get install ros-groovy-control-msgs ros-groovy-pr2-controllers ros-groovy-diagnostics-monitors ros-groovy-gscam 
 ```
-======
+
 * gazebo install
+======
 
 ```
 sudo apt-get update
@@ -87,3 +89,17 @@ echo export ROS_WORKSPACE=\~/groovy_workspace/ >> ~/.bashrc
 echo export ROS_PACKAGE_PATH=\$ROS_WORKSPACE:\$ROS_PACKAGE_PATH >> ~/.bashrc
 . ~/.bashrc
 ```
+
+* Get the control code
+======
+
+```
+roscd
+rosws set Pathplanning https://github.com/weiweihuang/Pathplanning.git --git
+rosws update wrecs
+rosdep update
+
+```
+
+
+
