@@ -471,7 +471,7 @@ _CATKIN_GTEST_INCLUDE:FILEPATH=_CATKIN_GTEST_INCLUDE-NOTFOUND
 _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
 
 //Path to a file.
-_file_name:FILEPATH=/home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/src/auto_car_control.cpp
+_file_name:FILEPATH=/home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/src/midware_test.cpp
 
 //Value Computed by CMake
 car_drive_control_BINARY_DIR:STATIC=/home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build

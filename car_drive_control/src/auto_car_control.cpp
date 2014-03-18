@@ -236,10 +236,19 @@ void wheelCallback(const std_msgs::Float64::ConstPtr& msg)
 			float ref_car_y = -ori_traj[0][count]*sinf(cur_ori) + ori_traj[1][count]*cosf(cur_ori);
 			float car_x = cur_x*cosf(cur_ori) + cur_y*sinf(cur_ori);
 			float car_y = -cur_x*sinf(cur_ori) + cur_y*cosf(cur_ori);
-			
 
 
-			vel_error = ref_traj[0][count] - cur_vel + 0.25*(ref_car_x - car_x);
+
+			//================== motion planning part ====================================//
+
+
+			float desired_vel = ref_traj[0][count] + 0.25*(ref_car_x - car_x);
+			float desired_steering = 5.0*ref_traj[1][count] - 2.0*(cur_ori - ori_traj[2][count]) + 0.5*(ref_car_y - car_y);  
+
+
+			//================== low level control part ==================================//
+
+			vel_error = desired_vel - cur_vel;
 
 			if (vel_error>0){
 				gasPedal.data = 2.5*vel_error-0.5*gas_pedal_state;
@@ -250,26 +259,10 @@ void wheelCallback(const std_msgs::Float64::ConstPtr& msg)
 				breakPedal.data = -5.0*vel_error;
 			}
 
-
-/*
-
-			gasPedal.data = 5.0*vel_error-0.5*gas_pedal_state + 0.0*(ref_car_x - car_x);
-
-		        if (gasPedal.data < 0){
-				gasPedal.data = -gasPedal.data;
-				direction.data = -1;
-			}
-			else
-				direction.data = 1;
+			handWheel.data = desired_steering;
 
 
-			if (ref_car_x - car_x<0)
-				breakPedal.data = -0.1*(ref_car_x - car_x);
-			else
-				breakPedal.data = 0.0;
-*/
-
-			handWheel.data = 5.0*ref_traj[1][count] - 2.0*(cur_ori - ori_traj[2][count]) + 0.5*(ref_car_y - car_y);
+                        //========================= end ==============================================//
 
 			log_data[0][count] = ori_traj[0][count];
 			log_data[1][count] = ori_traj[1][count];

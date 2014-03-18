@@ -242,12 +242,12 @@ void wheelCallback(const std_msgs::Float64::ConstPtr& msg)
 			vel_error = ref_traj[0][count] - cur_vel + 0.25*(ref_car_x - car_x);
 
 			if (vel_error>0){
-				gasPedal.data = 5.0*vel_error-0.5*gas_pedal_state;
+				gasPedal.data = 2.5*vel_error-0.5*gas_pedal_state;
 				breakPedal.data = 0.0;
 			}
 			else{
 				gasPedal.data = 0;
-				breakPedal.data = -10.0*vel_error;
+				breakPedal.data = -5.0*vel_error;
 			}
 
 

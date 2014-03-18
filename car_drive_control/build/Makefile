@@ -163,6 +163,19 @@ ROSBUILD_genmsg_lisp/fast:
 .PHONY : ROSBUILD_genmsg_lisp/fast
 
 #=============================================================================
+# Target rules for targets named ROSBUILD_genmsg_py
+
+# Build rule for target.
+ROSBUILD_genmsg_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ROSBUILD_genmsg_py
+.PHONY : ROSBUILD_genmsg_py
+
+# fast build rule for target.
+ROSBUILD_genmsg_py/fast:
+	$(MAKE) -f CMakeFiles/ROSBUILD_genmsg_py.dir/build.make CMakeFiles/ROSBUILD_genmsg_py.dir/build
+.PHONY : ROSBUILD_genmsg_py/fast
+
+#=============================================================================
 # Target rules for targets named ROSBUILD_gensrv_cpp
 
 # Build rule for target.
@@ -254,6 +267,19 @@ doxygen/fast:
 .PHONY : doxygen/fast
 
 #=============================================================================
+# Target rules for targets named midware_test
+
+# Build rule for target.
+midware_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 midware_test
+.PHONY : midware_test
+
+# fast build rule for target.
+midware_test/fast:
+	$(MAKE) -f CMakeFiles/midware_test.dir/build.make CMakeFiles/midware_test.dir/build
+.PHONY : midware_test/fast
+
+#=============================================================================
 # Target rules for targets named rosbuild_clean-test-results
 
 # Build rule for target.
@@ -304,6 +330,19 @@ rospack_genmsg: cmake_check_build_system
 rospack_genmsg/fast:
 	$(MAKE) -f CMakeFiles/rospack_genmsg.dir/build.make CMakeFiles/rospack_genmsg.dir/build
 .PHONY : rospack_genmsg/fast
+
+#=============================================================================
+# Target rules for targets named rospack_genmsg_all
+
+# Build rule for target.
+rospack_genmsg_all: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rospack_genmsg_all
+.PHONY : rospack_genmsg_all
+
+# fast build rule for target.
+rospack_genmsg_all/fast:
+	$(MAKE) -f CMakeFiles/rospack_genmsg_all.dir/build.make CMakeFiles/rospack_genmsg_all.dir/build
+.PHONY : rospack_genmsg_all/fast
 
 #=============================================================================
 # Target rules for targets named rospack_genmsg_libexe
@@ -483,6 +522,30 @@ src/cloud_assembler.cpp.s:
 	$(MAKE) -f CMakeFiles/cloud_assembler.dir/build.make CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.s
 .PHONY : src/cloud_assembler.cpp.s
 
+src/midware_test.o: src/midware_test.cpp.o
+.PHONY : src/midware_test.o
+
+# target to build an object file
+src/midware_test.cpp.o:
+	$(MAKE) -f CMakeFiles/midware_test.dir/build.make CMakeFiles/midware_test.dir/src/midware_test.cpp.o
+.PHONY : src/midware_test.cpp.o
+
+src/midware_test.i: src/midware_test.cpp.i
+.PHONY : src/midware_test.i
+
+# target to preprocess a source file
+src/midware_test.cpp.i:
+	$(MAKE) -f CMakeFiles/midware_test.dir/build.make CMakeFiles/midware_test.dir/src/midware_test.cpp.i
+.PHONY : src/midware_test.cpp.i
+
+src/midware_test.s: src/midware_test.cpp.s
+.PHONY : src/midware_test.s
+
+# target to generate assembly for a file
+src/midware_test.cpp.s:
+	$(MAKE) -f CMakeFiles/midware_test.dir/build.make CMakeFiles/midware_test.dir/src/midware_test.cpp.s
+.PHONY : src/midware_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -491,6 +554,7 @@ help:
 	@echo "... depend"
 	@echo "... ROSBUILD_genmsg_cpp"
 	@echo "... ROSBUILD_genmsg_lisp"
+	@echo "... ROSBUILD_genmsg_py"
 	@echo "... ROSBUILD_gensrv_cpp"
 	@echo "... ROSBUILD_gensrv_lisp"
 	@echo "... _catkin_empty_exported_target"
@@ -503,11 +567,13 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... midware_test"
 	@echo "... rebuild_cache"
 	@echo "... rosbuild_clean-test-results"
 	@echo "... rosbuild_precompile"
 	@echo "... rosbuild_premsgsrvgen"
 	@echo "... rospack_genmsg"
+	@echo "... rospack_genmsg_all"
 	@echo "... rospack_genmsg_libexe"
 	@echo "... rospack_gensrv"
 	@echo "... run_tests"
@@ -524,6 +590,9 @@ help:
 	@echo "... src/cloud_assembler.o"
 	@echo "... src/cloud_assembler.i"
 	@echo "... src/cloud_assembler.s"
+	@echo "... src/midware_test.o"
+	@echo "... src/midware_test.i"
+	@echo "... src/midware_test.s"
 .PHONY : help
 
 

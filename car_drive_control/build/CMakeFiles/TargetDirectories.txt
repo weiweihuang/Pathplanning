@@ -1,5 +1,6 @@
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir
+/home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/ROSBUILD_genmsg_py.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/ROSBUILD_gensrv_cpp.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/ROSBUILD_gensrv_lisp.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/_catkin_empty_exported_target.dir
@@ -9,10 +10,12 @@
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/doxygen.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/gtest/CMakeFiles/gtest.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/gtest/CMakeFiles/gtest_main.dir
+/home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/midware_test.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/rosbuild_clean-test-results.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/rosbuild_precompile.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/rosbuild_premsgsrvgen.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/rospack_genmsg.dir
+/home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/rospack_genmsg_all.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/rospack_genmsg_libexe.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/rospack_gensrv.dir
 /home/weiweihuang/groovy_workspace/Pathplanning/car_drive_control/build/CMakeFiles/run_tests.dir

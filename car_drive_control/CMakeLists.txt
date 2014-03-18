@@ -17,7 +17,7 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
 #uncomment if you have defined messages
-#rosbuild_genmsg()
+rosbuild_genmsg()
 #uncomment if you have defined services
 #rosbuild_gensrv()
 
@@ -37,6 +37,9 @@ rosbuild_add_executable(cloud_assembler src/cloud_assembler.cpp)
 rosbuild_link_boost(cloud_assembler thread)
 rosbuild_add_executable(auto_car_control src/auto_car_control.cpp)
 rosbuild_link_boost(auto_car_control thread)
+
+rosbuild_add_executable(midware_test src/midware_test.cpp)
+rosbuild_link_boost(midware_test thread)
 
 
 target_link_libraries(cloud_assembler libvtkCommon.so libvtkFiltering.so libvtkRendering.so libboost_signals.so ${PCL_LIBRARIES})

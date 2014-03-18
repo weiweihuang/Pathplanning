@@ -1,4 +1,7 @@
 FILE(REMOVE_RECURSE
+  "../msg_gen"
+  "../msg_gen"
+  "../src/car_drive_control/msg"
   "CMakeFiles/cloud_assembler.dir/src/cloud_assembler.cpp.o"
   "../bin/cloud_assembler.pdb"
   "../bin/cloud_assembler"

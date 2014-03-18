@@ -1,4 +1,7 @@
 FILE(REMOVE_RECURSE
+  "../msg_gen"
+  "../msg_gen"
+  "../src/car_drive_control/msg"
   "CMakeFiles/_catkin_empty_exported_target"
 )
 
